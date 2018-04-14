@@ -378,6 +378,14 @@ function wpblank_enqueue_scripts() {
   $js_directory = get_template_directory_uri() . '/js/';
   wp_register_script( 'jquery', $js_directory . 'jquery-3.2.1.min.js', 'jquery', '3.2.1' );
   wp_enqueue_script( 'jquery' );
+  wp_register_script( 'skrollr', $js_directory . 'lib/skrollr.js', 'skrollr', '1.0' );
+  wp_enqueue_script( 'skrollr' );
+  wp_register_script( 'onscreen', $js_directory . 'lib/onscreen.js', 'onscreen', '1.0' );
+  wp_enqueue_script( 'onscreen' );
+  wp_register_script( 'barba', $js_directory . 'lib/barba.js', 'barba', '1.0' );
+  wp_enqueue_script( 'barba' );
+  wp_register_script( 'TweenMax', $js_directory . 'lib/TweenMax.js', 'TweenMax', '1.0' );
+  wp_enqueue_script( 'TweenMax' );
   wp_register_script( 'global', $js_directory . 'scripts.js', 'jquery', '1.0' );
   wp_enqueue_script( 'global' );
 }
