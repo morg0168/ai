@@ -556,6 +556,7 @@ html {
         height: 100%;
         display: block;
         .c-nav_wrap {
+          height:100%;
           ul.c-nav_main_list li.c-nav_main_item {
             position: relative;
             display: inline-block;
@@ -780,7 +781,6 @@ html {
 @media only screen and (max-width: 767px) {
   .c-header .c-header_wrap .c-header_inner .c-nav.menu_is_loaded .c-nav_main_list {
     text-align: left;
-    padding-top: 20rem;
     padding-left: 0;
     a {
       color: #fff;
@@ -1117,7 +1117,7 @@ footer {
       color: #fff;
       padding: 0.4rem;
       border-right: 1px solid grey;
-      font-size: 1.4rem;
+      font-size: 1rem;
       display: block;
       a {
         color: #fff;
