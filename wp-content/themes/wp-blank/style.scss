@@ -1000,9 +1000,9 @@ main {
 @media only screen and (min-width: 768px) {
   main .c-main_wrap {
     min-height: calc(96.25vh);
-  }
-  main .c-main_wrap .c-main_inner_home {
-    padding-top: 20vh;
+    .c-main_inner_home {
+      width:100%;
+    }
   }
   main .c-main_wrap .c-main_inner_home .c-home_header {
     font-size: 1.75rem;
@@ -1020,7 +1020,7 @@ main {
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
     font-size: 145px;
-    line-height: 115px;
+    line-height: 145px;
     transition-delay: 0.2s;
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_subtitle {
@@ -1037,7 +1037,6 @@ main {
   }
 
   main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .text-slide_contain.-first {
-    margin-bottom: -100px;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
@@ -1156,6 +1155,11 @@ footer {
     background-color: white;
     position: relative;
   }
+}
+
+.c-footer_inner {
+  margin-right:0;
+  margin-left:0;
 }
 
 /*** codes***/

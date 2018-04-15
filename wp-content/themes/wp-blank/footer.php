@@ -1,7 +1,7 @@
 		<footer>
 		        <div id="map"></div>
 		        <div class="c-footer_contain">
-		            <div class="c-footer_inner row middle-xs">
+		            <div class="c-footer_inner row middle-xs center-xs">
 		                <div class="col col-xs-6 col-sm-3 logo u-demi-text"> <span class="box -text-left">
 		                        AMAIMMO<br>12 Laurier, Montreal<br>438.883.2055<br>M - F : 9am - 5pm <br> S - S : 12am - 3pm
 		                    </span> </div>
