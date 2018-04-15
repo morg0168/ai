@@ -46,7 +46,7 @@
 		<div class="wrapper">
    
 		    <!--language switcher modal-->
-		    <div class="c-loader_contain row middle-xs">
+<!-- 		    <div class="c-loader_contain row middle-xs">
 		        <div class="c-loader col-xs-12 center-xs">
 		            <div class="c-loader_text_contain">
 		                <div class="c-loader_text row middle-xs center-xs">
@@ -59,7 +59,7 @@
 		                </div>
 		            </div>
 		        </div>
-		    </div>
+		    </div> -->
 
 		    <!-- loader -->
 		    <div class="c-spinner">
@@ -77,7 +77,7 @@
 		                <nav class="c-nav" id="js-nav">
 		                    <div class="c-nav_wrap row middle-xs center-xs">
 		                        <ul class="c-nav_main_list">
-		                            <li class="c-nav_main_item -first"><a href="<?php echo home_url(); ?>/mission" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
+		                            <li class="c-nav_main_item -first"><a href="<?php echo home_url(); ?>/mission/" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
 		                            <li class="c-nav_main_item -second"><a href="organization.html" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organization</span></a></li>
 		                            <li class="c-nav_main_item -third"><a href="codes.html" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
 		                        </ul>

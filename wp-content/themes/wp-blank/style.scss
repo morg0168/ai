@@ -613,7 +613,10 @@ html {
   background-color: #fff;
   z-index: 900;
   &.c-header_scrolled {
-    height: 70px;
+    @media only screen and (max-width: 767px) {
+      height: 70px;
+    }
+    height: 3.75rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }

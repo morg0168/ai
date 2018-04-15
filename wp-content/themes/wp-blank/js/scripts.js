@@ -111,10 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.location.href.indexOf('index') > -1) {
     	languageChosen();
     }
-    else {
+    //else {
         skrollrStart();
         onscreenStart();
-    }
+   // }
     barbaStart();
     //scroll to top when top button clicked
     $('.c-header_scrolltop').click(function () {
