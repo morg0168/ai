@@ -55,7 +55,7 @@
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
                                         <p class="c-block_text_title_pre">Notre</p>
-                                        <p class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Mission </p>
+                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Mission </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Service a la clientèle</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Gestionnaire d’immeubles</li>
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="o-limbo clearfix">
-                            <p class="c-next-section js-parallax" data-200-center="@class:c-next-section js-parallax -in-view" data-start="@class:c-next-section js-parallax"> <span class="c-mask">Next Section</span> </p>
+                            <p class="c-next-section js-parallax" data-200-center="@class:c-next-section js-parallax -in-view" data-start="@class:c-next-section js-parallax"> <span class="c-mask">+</span> </p>
                         </div>
                     </div>
                 </section>
@@ -78,17 +78,17 @@
                     <div class="c-content_wrap o-container -small ">
                         <div class="c-home_blocks_wrap o-grid row middle-xs">
                             <!--BLOCK 1-->
-                            <div class="c-home_block c-half_block -left col-xs-8">
+                            <div class="c-home_block c-half_block -left col-xs-6">
                                 <div class="c-block_image box">
-                                    <div class="c-home_img_wrap "> <img src="<?php echo get_template_directory_uri(); ?>/img/hero.jpg " alt=" " data-bottom="@myAttr: -in-view;"> </div>
+                                    <div class="c-home_img_wrap "> <img src="<?php echo get_template_directory_uri(); ?>/img/white.jpg " alt=" " data-bottom="@myAttr: -in-view;"> </div>
                                     <a href=" " class="c-block_link "></a>
                                 </div>
                             </div>
-                            <div class="c-home_block c-half_block -right -first col-xs-4">
+                            <div class="c-home_block c-half_block -right -first col-xs-6">
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
                                         <p class="c-block_text_title_pre">Notre</p>
-                                        <p class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Organization </p>
+                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Organization </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Service a la clientèle</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Gestionnaire d’immeubles</li>
@@ -102,26 +102,26 @@
                             </div>
                         </div>
                         <div class="o-limbo clearfix">
-                            <p class="c-next-section js-parallax" data-200-center="@class:c-next-section js-parallax -in-view" data-start="@class:c-next-section js-parallax"> <span class="c-mask">Next Section</span> </p>
+                            <p class="c-next-section js-parallax" data-200-center="@class:c-next-section js-parallax -in-view" data-start="@class:c-next-section js-parallax"> <span class="c-mask">+</span> </p>
                         </div>
                     </div>
                 </section>
                 <!-- section 4 -->
                 <section class="section-004 organization" id="section-003">
                     <div class="c-content_wrap o-container -small ">
-                        <div class="c-home_blocks_wrap o-grid row">
+                        <div class="c-home_blocks_wrap o-grid row middle-xs">
                             <!--BLOCK 1-->
-                            <div class="c-home_block c-half_block -left col-xs-3">
+                            <div class="c-home_block c-half_block -left col-xs-6">
                                 <div class="c-block_image box">
-                                    <div class="c-home_img_wrap "> <img src="<?php echo get_template_directory_uri(); ?>/img/hero.jpg " alt=" " data-bottom="@myAttr: -in-view;"> </div>
+                                    <div class="c-home_img_wrap "> <img src="<?php echo get_template_directory_uri(); ?>/img/grey.jpg " alt=" " data-bottom="@myAttr: -in-view;"> </div>
                                     <a href=" " class="c-block_link "></a>
                                 </div>
                             </div>
-                            <div class="c-home_block c-half_block -right -first col-xs-9">
+                            <div class="c-home_block c-half_block -right -first col-xs-6">
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
                                         <p class="c-block_text_title_pre">Notre</p>
-                                        <p class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> codes </p>
+                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> codes </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Service a la clientèle</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Gestionnaire d’immeubles</li>
@@ -133,9 +133,6 @@
                                     <a href=" " class="c-block_link "></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="o-limbo clearfix">
-                            <p class="c-next-section js-parallax" data-200-center="@class:c-next-section js-parallax -in-view" data-start="@class:c-next-section js-parallax"> <span class="c-mask">Next Section</span> </p>
                         </div>
                     </div>
                 </section>

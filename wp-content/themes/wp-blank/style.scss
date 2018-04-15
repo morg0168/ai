@@ -430,11 +430,6 @@ button:focus {
   }
 }
 
-.o-grid {
-  margin-left: 0;
-  fieldletter-spacing: normal;
-  font-size: 0;
-}
 
 html {
   color: #000;
@@ -1116,7 +1111,6 @@ footer {
     span {
       color: #fff;
       padding: 0.4rem;
-      border-right: 1px solid grey;
       font-size: 1rem;
       display: block;
       a {
@@ -1124,8 +1118,6 @@ footer {
       }
     }
     .c-footer_inner {
-      border-top: 1px solid grey;
-      border-bottom: 1px solid grey;
     }
   }
 }
@@ -1133,15 +1125,31 @@ footer {
 /*** new styles***/
 
 .home {
+  @media only screen and (max-width: 767px) {
+    h1 {
+      font-size:2.5rem;
+    }
+    .c-block_read_more {
+      padding: 1rem 1rem;
+      right: 1em;
+      top: 1rem;
+    }
+    .c-block_text_wrap {
+      ul {
+      padding:0;
+    }
+   }
+   .c-next-section {
+    padding:2rem 0;
+   }
+   .o-limbo .c-next-section.-in-view::before {
+    top:4rem;
+   }
+}
   .section-001 {
     .o-limbo .c-next-section {
       margin-top: -5rem;
       margin-bottom: 7.5rem;
-    }
-    h1 {
-      @media only screen and (max-width: 767px) {
-        font-size:2.5rem;
-      }
     }
   }
   .section-002 {

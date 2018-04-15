@@ -37,7 +37,7 @@
 	<body <?php body_class('-modal-open'); ?>>
 
 
-		<!-- <nav class="nav" role="navigation">
+	<!-- 	<nav class="nav" role="navigation">
 			<?php //wpblank_nav(); ?>
 		</nav> -->
 				
@@ -71,12 +71,13 @@
 		        <div class="c-header_wrap o-container">
 		            <div class="c-header_inner">
 		                <!--mobile nav will go here-->
-		                <div class="c-header_main_logo"><a class="c-header_main_logo_link ajaxlink" href="<?php echo home_url(); ?>"><span><img src="<?php echo get_template_directory_uri(); ?>/img/logo_text.png" alt=""></span></a> </div>
+		                <div class="c-header_main_logo"><a class="c-header_main_logo_link ajaxlink" href="<?php echo home_url(); ?>"><span><img src="<?php echo get_template_directory_uri(); ?>/img/logo_text.png" alt=""></span></a>
+		                </div>
 		                <button id="js-toggle_menu"><span></span></button>
 		                <nav class="c-nav" id="js-nav">
 		                    <div class="c-nav_wrap row middle-xs center-xs">
 		                        <ul class="c-nav_main_list">
-		                            <li class="c-nav_main_item -first"><a href="mission.html" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
+		                            <li class="c-nav_main_item -first"><a href="<?php echo home_url(); ?>/mission" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
 		                            <li class="c-nav_main_item -second"><a href="organization.html" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organization</span></a></li>
 		                            <li class="c-nav_main_item -third"><a href="codes.html" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
 		                        </ul>
