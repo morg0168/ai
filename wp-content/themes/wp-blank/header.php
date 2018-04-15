@@ -78,8 +78,8 @@
 		                    <div class="c-nav_wrap row middle-xs center-xs">
 		                        <ul class="c-nav_main_list">
 		                            <li class="c-nav_main_item -first"><a href="<?php echo home_url(); ?>/mission/" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
-		                            <li class="c-nav_main_item -second"><a href="organization.html" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organization</span></a></li>
-		                            <li class="c-nav_main_item -third"><a href="codes.html" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
+		                            <li class="c-nav_main_item -second"><a href="<?php echo home_url(); ?>/organisation/" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
+		                            <li class="c-nav_main_item -third"><a href="<?php echo home_url(); ?>/codes/" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
 		                        </ul>
 		                        <div class="c-main_right"> <a href="" class="c-main_right_laguage c-nav_main_link -small "><span class="c-main_right_language_text">FR</span></a>
 		                            <div class="c-main_right_contact"><a href="javascript:void(0)" class="c-main_contact_button o-button fill" id=" contact-us">Contact<span class="button_line"></span><span class="button_line"></span></a></div>
