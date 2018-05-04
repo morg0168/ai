@@ -25,10 +25,10 @@
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
-if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-  wp_enqueue_script('livereload');
-}
+// if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+//   wp_enqueue_script('livereload');
+//     wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+// }
 
 if (!isset($content_width))
 {
@@ -125,7 +125,7 @@ function wpblank_deregister_scripts(){
 
 function load_custom_wp_admin_style() {
     wp_register_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0', 'all');
-    wp_enqueue_style('fontawesome'); // Enqueue it!  
+    wp_enqueue_style('fontawesome'); // Enqueue it!
     wp_register_style('adminstyle', get_template_directory_uri() . '/css/admin.css', array(), '1.0', 'all');
     wp_enqueue_style('adminstyle'); // Enqueue it!
 }
@@ -290,7 +290,7 @@ function wpblankcomments($comment, $args, $depth)
 		$add_below = 'div-comment';
 	}
 ?>
-   
+
     <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
 	<?php if ( 'div' != $args['style'] ) : ?>
 	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
@@ -329,10 +329,10 @@ function wpblankcomments($comment, $args, $depth)
 
 //Function de register redundant assets in header
 
-function deregister_reddt_script() {
-  wp_deregister_script( 'jquery' );
-}
-add_action( 'wp_print_scripts', 'deregister_reddt_script', 100 );
+// function deregister_reddt_script() {
+//   wp_deregister_script( 'jquery' );
+// }
+// add_action( 'wp_print_scripts', 'deregister_reddt_script', 100 );
 
 
 /*Remove contact form 7 styles*/
@@ -376,18 +376,20 @@ function disable_emojicons_tinymce( $plugins ) {
 
 function wpblank_enqueue_scripts() {
   $js_directory = get_template_directory_uri() . '/js/';
-  wp_register_script( 'jquery', $js_directory . 'jquery-3.2.1.min.js', 'jquery', '3.2.1' );
+
   wp_enqueue_script( 'jquery' );
-  wp_register_script( 'skrollr', $js_directory . 'lib/skrollr.js', 'skrollr', '1.0' );
   wp_enqueue_script( 'skrollr' );
-  wp_register_script( 'onscreen', $js_directory . 'lib/onscreen.js', 'onscreen', '1.0' );
   wp_enqueue_script( 'onscreen' );
-  wp_register_script( 'barba', $js_directory . 'lib/barba.min.js', 'barba', '1.0' );
   wp_enqueue_script( 'barba' );
-  wp_register_script( 'TweenMax', $js_directory . 'lib/TweenMax.min.js', 'TweenMax', '1.0' );
   wp_enqueue_script( 'TweenMax' );
-  wp_register_script( 'global', $js_directory . 'scripts.js', 'jquery', '1.0' );
   wp_enqueue_script( 'global' );
+
+  wp_register_script( 'global', $js_directory . 'scripts.js', 'jquery', '1.0' );
+  wp_register_script( 'TweenMax', $js_directory . 'lib/TweenMax.min.js', 'TweenMax', '1.0' );
+  wp_register_script( 'barba', $js_directory . 'lib/barba.min.js', 'barba', '1.0' );
+  wp_register_script( 'onscreen', $js_directory . 'lib/onscreen.js', 'onscreen', '1.0' );
+  wp_register_script( 'skrollr', $js_directory . 'lib/skrollr.js', 'skrollr', '1.0' );
+  wp_register_script( 'jquery', $js_directory . 'jquery-3.2.1.min.js', 'jquery', '3.2.1' );
 }
 
 /*------------------------------------*\
@@ -395,16 +397,16 @@ function wpblank_enqueue_scripts() {
 \*------------------------------------*/
 
 // Add Actions
-//add_action('init', 'wpblank_header_scripts'); 
+//add_action('init', 'wpblank_header_scripts');
 
-add_action('get_header', 'enable_threaded_comments'); 
-add_action('wp_enqueue_scripts', 'wpblank_styles'); 
+add_action('get_header', 'enable_threaded_comments');
+add_action('wp_enqueue_scripts', 'wpblank_styles');
 add_action( 'wp_footer', 'wpblank_enqueue_scripts' );
 
-add_action('init', 'register_wpblank_menu'); 
-add_action('init', 'create_post_type_wpblank'); 
-add_action('widgets_init', 'my_remove_recent_comments_style'); 
-add_action('init', 'wp_pagination'); 
+add_action('init', 'register_wpblank_menu');
+add_action('init', 'create_post_type_wpblank');
+add_action('widgets_init', 'my_remove_recent_comments_style');
+add_action('init', 'wp_pagination');
 add_action( 'wp_footer', 'wpblank_deregister_scripts' );
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -456,9 +458,9 @@ add_shortcode('wpblank_shortcode_demo_2', 'wpblank_shortcode_demo_2'); // Place 
 // Create 1 Custom Post type for a Demo, called wp-blank
 function create_post_type_wpblank()
 {
-    register_taxonomy_for_object_type('category', 'wp-blank'); 
+    register_taxonomy_for_object_type('category', 'wp-blank');
     register_taxonomy_for_object_type('post_tag', 'wp-blank');
-    register_post_type('wp-blank', 
+    register_post_type('wp-blank',
         array(
         'labels' => array(
             'name' => __(' Custom Post', 'wpblank'), // Rename these to suit will appear in permalink
@@ -475,7 +477,7 @@ function create_post_type_wpblank()
             'not_found_in_trash' => __('No  Custom Posts found in Trash', 'wpblank')
         ),
         'public' => true,
-        'hierarchical' => true, 
+        'hierarchical' => true,
         'has_archive' => true,
         'supports' => array(
             'title',
@@ -483,13 +485,13 @@ function create_post_type_wpblank()
             'excerpt',
             'custom-fields',
             'thumbnail'
-        ), 
-        'can_export' => true, 
-        'register_meta_box_cb' => 'add_seo'  
+        ),
+        'can_export' => true,
+        'register_meta_box_cb' => 'add_seo'
 //        'taxonomies' => array(
 //            'post_tag',
 //            'category'
-//        ) 
+//        )
     ));
 }
 
@@ -538,23 +540,23 @@ function add_home_block_meta()
 function display_home_block_meta()
 {
 
-	global $post;  
+	global $post;
     $hp_block = get_post_meta( $post->ID, 'home_block' , true); ?>
 	<input type="hidden" name="home_block_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
     <label for="home_block[text]">Title - H2</label>
-   
+
     <br/>
-    
+
 	<input type="text" name="home_block[text]" id="home_block[text]" class="input-admin" value="<?php if ( ! empty( $hp_block ) ) {
         echo $hp_block['text'];
     } ?>" placeholder="Edit">
     <br/>
     <br/>
-      
+
     <label for="home_block[text]">Text Content</label>
     <br/>
-    
-      <textarea type="textarea" name="home_block[textarea]" id="home_block[textarea]" class="textarea-admin" > 
+
+      <textarea type="textarea" name="home_block[textarea]" id="home_block[textarea]" class="textarea-admin" >
       <?php if ( ! empty( $hp_block ) ) {
         echo $hp_block['textarea'];
     } else{ ?> Edit  <?php }?>
@@ -563,10 +565,10 @@ function display_home_block_meta()
 
 
   /*Save custom fields in DB*/
-function save_home_block_function( $post_id ) {   
+function save_home_block_function( $post_id ) {
 	// verify nonce
 	if ( !wp_verify_nonce( $_POST['home_block_nonce'], basename(__FILE__) ) ) {
-		return $post_id; 
+		return $post_id;
 	}
 	// check autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
@@ -578,7 +580,7 @@ function save_home_block_function( $post_id ) {
 			return $post_id;
 		} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
 			return $post_id;
-		}  
+		}
 	}
 	$old = get_post_meta( $post_id, 'home_block', true );
 	$new = $_POST['home_block'];
@@ -594,7 +596,7 @@ add_action( 'save_post', 'save_home_block_function' );
 
 /*------------------------------------*\
 	Meta box SEO
-    // add a custom meta box in post 
+    // add a custom meta box in post
      and  custom type and page sidebar
 \*------------------------------------*/
 
@@ -606,7 +608,7 @@ add_action( 'save_post', 'save_home_block_function' );
 
  /*Display custom fields in meta box*/
   function meta_seo_function(){
-	global $post;  
+	global $post;
     $meta = get_post_meta( $post->ID, 'seo_desc' , true); ?>
 	<input type="hidden" name="meta_seo_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 <!--	<label for="seo_desc[text]">Add a meta description</label>-->
@@ -622,10 +624,10 @@ add_action( 'save_post', 'save_home_block_function' );
 	<?php }
 
   /*Save custom fields in DB*/
-  function save_meta_seo_function( $post_id ) {   
+  function save_meta_seo_function( $post_id ) {
 	// verify nonce
 	if ( !wp_verify_nonce( $_POST['meta_seo_nonce'], basename(__FILE__) ) ) {
-		return $post_id; 
+		return $post_id;
 	}
 	// check autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
@@ -637,7 +639,7 @@ add_action( 'save_post', 'save_home_block_function' );
 			return $post_id;
 		} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
 			return $post_id;
-		}  
+		}
 	}
 	$old = get_post_meta( $post_id, 'seo_desc', true );
 	$new = $_POST['seo_desc'];
@@ -654,7 +656,7 @@ add_action( 'save_post', 'save_meta_seo_function' );
 
 
 /*------------------------------------*\
- Customize dashboard 
+ Customize dashboard
 \*------------------------------------*/
 function custom_dashboard_widget() {
 	echo "<ul>";
@@ -695,15 +697,15 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widget');
 // customize admin footer text
 function custom_admin_footer() {
 	echo 'Website Designed and Developped by Mentel';
-} 
+}
 add_filter('admin_footer_text', 'custom_admin_footer');
 
 //remove menu
 
 function remove_menus(){
-  
+
  // remove_menu_page( 'index.php' );                  //Dashboard
- // remove_menu_page( 'jetpack' );                    //Jetpack* 
+ // remove_menu_page( 'jetpack' );                    //Jetpack*
  // remove_menu_page( 'edit.php' );                   //Posts
  // remove_menu_page( 'upload.php' );                 //Media
  // remove_menu_page( 'edit.php?post_type=page' );    //Pages
@@ -713,20 +715,15 @@ function remove_menus(){
  // remove_menu_page( 'users.php' );                  //Users
  // remove_menu_page( 'tools.php' );                  //Tools
  // remove_menu_page( 'options-general.php' );        //Settings
-  
+
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-?>
-
-      
-<?php
-      
-      
+?><?php
 /*------------------------------------*\
 	Global custom key for social links
-\*------------------------------------*/ 
-      
+\*------------------------------------*/
+
 /**
  * Create A Simple Theme Options Panel
  *
@@ -742,7 +739,7 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 
 	class WPEX_Theme_Options {
 
-		
+
 		public function __construct() {
 
 			// We only need to register the admin panel on the back-end
@@ -753,12 +750,12 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 
 		}
 
-		
+
 		public static function get_theme_options() {
 			return get_option( 'theme_options' );
 		}
 
-		
+
 		public static function get_theme_option( $id ) {
 			$options = self::get_theme_options();
 			if ( isset( $options[$id] ) ) {
@@ -766,7 +763,7 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 			}
 		}
 
-		
+
 		public static function add_admin_menu() {
 			add_menu_page(
 				esc_html__( 'Social url', 'text-domain' ),
@@ -777,7 +774,7 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 			);
 		}
 
-		
+
 		public static function register_settings() {
 			register_setting( 'theme_options', 'theme_options', array( 'WPEX_Theme_Options', 'sanitize' ) );
 		}
@@ -800,7 +797,7 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 							<th scope="row">
                               <i class="fa fa-facebook"></i> <?php esc_html_e( 'Facebook url', 'text-domain' ); ?></th>
 							<td>
-                              
+
 								<?php $value = self::get_theme_option( 'facebook_url' ); ?>
 								<input type="text" name="theme_options[facebook_url]" value="<?php echo esc_attr( $value ); ?>">
 							</td>
@@ -839,24 +836,23 @@ new WPEX_Theme_Options();
 function myprefix_get_theme_option( $id = '' ) {
 	return WPEX_Theme_Options::get_theme_option( $id );
 }
-//     How to get the value in the template 
+//     How to get the value in the template
 //     $value = myprefix_get_theme_option( 'facebook_url' );
 //    echo $value;
-      
+
 /*------------------------------------*\
 	Admin reskin
-\*------------------------------------*/      
+\*------------------------------------*/
       // Replace Icons In admin
       add_action( 'admin_head', 'replace_admin_menu_icon' );
       function replace_admin_menu_icon() {
 ?>
 
     <style type="text/css">
-      .dashicons-admin-post:before, .dashicons-format-standard:before{ 
+      .dashicons-admin-post:before, .dashicons-format-standard:before{
         content: '\f123';
       }
 
     </style>
 
-<?php } ?>      
-      
+<?php } ?>
