@@ -1609,7 +1609,7 @@ function _custom_background_cb() {
 	}
 ?>
 <style type="text/css" id="custom-background-css">
-body.custom-background { <?php echo trim( $style ); ?> }
+body.custom-background { <?php echo trim( $style ); ?>}
 </style>
 <?php
 }
@@ -2479,7 +2479,7 @@ function _custom_logo_header_styles() {
 		?>
 		<!-- Custom Logo: hide header text -->
 		<style id="custom-logo-css" type="text/css">
-			<?php echo $classes; ?> {
+			<?php echo $classes; ?>{
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}

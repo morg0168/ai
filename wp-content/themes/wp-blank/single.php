@@ -24,8 +24,8 @@
 			<!-- /post title -->
 
 			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'wpblank' ); ?> <?php the_author_posts_link(); ?></span>
+			<span class="date"><?php the_time('F j, Y'); ?><?php the_time('g:i a'); ?></span>
+			<span class="author"><?php _e( 'Published by', 'wpblank' ); ?><?php the_author_posts_link(); ?></span>
 			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'wpblank' ), __( '1 Comment', 'wpblank' ), __( '% Comments', 'wpblank' )); ?></span>
 			<!-- /post details -->
 
@@ -62,8 +62,8 @@
 			<!-- /post title -->
 
 			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'wpblank' ); ?> <?php the_author_posts_link(); ?></span>
+			<span class="date"><?php the_time('F j, Y'); ?><?php the_time('g:i a'); ?></span>
+			<span class="author"><?php _e( 'Published by', 'wpblank' ); ?><?php the_author_posts_link(); ?></span>
 			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'wpblank' ), __( '1 Comment', 'wpblank' ), __( '% Comments', 'wpblank' )); ?></span>
 			<!-- /post details -->
 

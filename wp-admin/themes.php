@@ -167,9 +167,9 @@ if ( ! validate_current_theme() || isset( $_GET['broken'] ) ) : ?>
 <div id="message1" class="updated notice is-dismissible"><p><?php _e('The active theme is broken. Reverting to the default theme.'); ?></p></div>
 <?php elseif ( isset($_GET['activated']) ) :
 		if ( isset( $_GET['previewed'] ) ) { ?>
-		<div id="message2" class="updated notice is-dismissible"><p><?php _e( 'Settings saved and theme activated.' ); ?> <a href="<?php echo home_url( '/' ); ?>"><?php _e( 'Visit site' ); ?></a></p></div>
+		<div id="message2" class="updated notice is-dismissible"><p><?php _e( 'Settings saved and theme activated.' ); ?><a href="<?php echo home_url( '/' ); ?>"><?php _e( 'Visit site' ); ?></a></p></div>
 		<?php } else { ?>
-<div id="message2" class="updated notice is-dismissible"><p><?php _e( 'New theme activated.' ); ?> <a href="<?php echo home_url( '/' ); ?>"><?php _e( 'Visit site' ); ?></a></p></div><?php
+<div id="message2" class="updated notice is-dismissible"><p><?php _e( 'New theme activated.' ); ?><a href="<?php echo home_url( '/' ); ?>"><?php _e( 'Visit site' ); ?></a></p></div><?php
 		}
 	elseif ( isset($_GET['deleted']) ) : ?>
 <div id="message3" class="updated notice is-dismissible"><p><?php _e('Theme deleted.') ?></p></div>

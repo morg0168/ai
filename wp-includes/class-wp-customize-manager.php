@@ -467,7 +467,7 @@ final class WP_Customize_Manager {
 			( function( api, settings ) {
 				var preview = new api.Messenger( settings.messengerArgs );
 				preview.send( 'iframe-loading-error', settings.error );
-			} )( wp.customize, <?php echo wp_json_encode( $settings ) ?> );
+			} )( wp.customize, <?php echo wp_json_encode( $settings ) ?>);
 			</script>
 			<?php
 			$message .= ob_get_clean();

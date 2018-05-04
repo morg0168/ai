@@ -1101,7 +1101,7 @@ final class WP_Screen {
 				?>
 				<label class="columns-prefs-<?php echo $i; ?>">
 					<input type='radio' name='screen_columns' value='<?php echo esc_attr( $i ); ?>'
-						<?php checked( $screen_layout_columns, $i ); ?> />
+						<?php checked( $screen_layout_columns, $i ); ?>/>
 					<?php printf( _n( '%s column', '%s columns', $i ), number_format_i18n( $i ) ); ?>
 				</label>
 				<?php
@@ -1213,11 +1213,11 @@ final class WP_Screen {
 		<fieldset class="metabox-prefs view-mode">
 		<legend><?php _e( 'View Mode' ); ?></legend>
 				<label for="list-view-mode">
-					<input id="list-view-mode" type="radio" name="mode" value="list" <?php checked( 'list', $mode ); ?> />
+					<input id="list-view-mode" type="radio" name="mode" value="list" <?php checked( 'list', $mode ); ?>/>
 					<?php _e( 'List View' ); ?>
 				</label>
 				<label for="excerpt-view-mode">
-					<input id="excerpt-view-mode" type="radio" name="mode" value="excerpt" <?php checked( 'excerpt', $mode ); ?> />
+					<input id="excerpt-view-mode" type="radio" name="mode" value="excerpt" <?php checked( 'excerpt', $mode ); ?>/>
 					<?php _e( 'Excerpt View' ); ?>
 				</label>
 		</fieldset>

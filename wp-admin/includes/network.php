@@ -214,7 +214,7 @@ function network_step1( $errors = false ) {
 		<?php // @todo: Link to an MS readme? ?>
 		<table class="form-table">
 			<tr>
-				<th><label><input type="radio" name="subdomain_install" value="1"<?php checked( $subdomain_install ); ?> /> <?php _e( 'Sub-domains' ); ?></label></th>
+				<th><label><input type="radio" name="subdomain_install" value="1"<?php checked( $subdomain_install ); ?>/> <?php _e( 'Sub-domains' ); ?></label></th>
 				<td><?php printf(
 					/* translators: 1: hostname */
 					_x( 'like <code>site1.%1$s</code> and <code>site2.%1$s</code>', 'subdomain examples' ),
@@ -222,7 +222,7 @@ function network_step1( $errors = false ) {
 				); ?></td>
 			</tr>
 			<tr>
-				<th><label><input type="radio" name="subdomain_install" value="0"<?php checked( ! $subdomain_install ); ?> /> <?php _e( 'Sub-directories' ); ?></label></th>
+				<th><label><input type="radio" name="subdomain_install" value="0"<?php checked( ! $subdomain_install ); ?>/> <?php _e( 'Sub-directories' ); ?></label></th>
 				<td><?php printf(
 					/* translators: 1: hostname */
 					_x( 'like <code>%1$s/site1</code> and <code>%1$s/site2</code>', 'subdirectory examples' ),
@@ -600,7 +600,7 @@ EOF;
 	<?php endif; // end IIS/Apache code branches.
 
 	if ( !is_multisite() ) { ?>
-		<p><?php _e( 'Once you complete these steps, your network is enabled and configured. You will have to log in again.' ); ?> <a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e( 'Log In' ); ?></a></p>
+		<p><?php _e( 'Once you complete these steps, your network is enabled and configured. You will have to log in again.' ); ?><a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e( 'Log In' ); ?></a></p>
 <?php
 	}
 }

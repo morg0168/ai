@@ -23,7 +23,7 @@ function wp_underscore_audio_template() {
 	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"
 	<#
 	<?php foreach ( array( 'autoplay', 'loop' ) as $attr ):
-	?>if ( ! _.isUndefined( data.model.<?php echo $attr ?> ) && data.model.<?php echo $attr ?> ) {
+	?>if ( ! _.isUndefined( data.model.<?php echo $attr ?>) && data.model.<?php echo $attr ?>) {
 		#> <?php echo $attr ?><#
 	}
 	<?php endforeach ?>#>
@@ -33,8 +33,8 @@ function wp_underscore_audio_template() {
 	<# } #>
 
 	<?php foreach ( $audio_types as $type ):
-	?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) { #>
-	<source src="{{ data.model.<?php echo $type ?> }}" type="{{ wp.media.view.settings.embedMimes[ '<?php echo $type ?>' ] }}" />
+	?><# if ( ! _.isEmpty( data.model.<?php echo $type ?>) ) { #>
+	<source src="{{ data.model.<?php echo $type ?>}}" type="{{ wp.media.view.settings.embedMimes[ '<?php echo $type ?>' ] }}" />
 	<# } #>
 	<?php endforeach;
 ?></audio>
@@ -94,16 +94,16 @@ function wp_underscore_video_template() {
 	foreach ( $props as $key => $value ):
 		if ( empty( $value ) ) {
 		?><#
-		if ( ! _.isUndefined( data.model.<?php echo $key ?> ) && data.model.<?php echo $key ?> ) {
-			#> <?php echo $key ?>="{{ data.model.<?php echo $key ?> }}"<#
+		if ( ! _.isUndefined( data.model.<?php echo $key ?>) && data.model.<?php echo $key ?>) {
+			#> <?php echo $key ?>="{{ data.model.<?php echo $key ?>}}"<#
 		} #>
 		<?php } else {
-			echo $key ?>="{{ _.isUndefined( data.model.<?php echo $key ?> ) ? '<?php echo $value ?>' : data.model.<?php echo $key ?> }}"<?php
+			echo $key ?>="{{ _.isUndefined( data.model.<?php echo $key ?>) ? '<?php echo $value ?>' : data.model.<?php echo $key ?>}}"<?php
 		}
 	endforeach;
 	?><#
 	<?php foreach ( array( 'autoplay', 'loop' ) as $attr ):
-	?> if ( ! _.isUndefined( data.model.<?php echo $attr ?> ) && data.model.<?php echo $attr ?> ) {
+	?>if ( ! _.isUndefined( data.model.<?php echo $attr ?>) && data.model.<?php echo $attr ?>) {
 		#> <?php echo $attr ?><#
 	}
 	<?php endforeach ?>#>
@@ -119,8 +119,8 @@ function wp_underscore_video_template() {
 	} #>
 
 	<?php foreach ( $video_types as $type ):
-	?><# if ( data.model.<?php echo $type ?> ) { #>
-	<source src="{{ data.model.<?php echo $type ?> }}" type="{{ settings.embedMimes[ '<?php echo $type ?>' ] }}" />
+	?><# if ( data.model.<?php echo $type ?>) { #>
+	<source src="{{ data.model.<?php echo $type ?>}}" type="{{ settings.embedMimes[ '<?php echo $type ?>' ] }}" />
 	<# } #>
 	<?php endforeach; ?>
 	{{{ data.model.content }}}
@@ -390,7 +390,7 @@ function wp_print_media_templates() {
 				) as $key => $label ) : ?>
 				<label class="setting" data-setting="<?php echo esc_attr( $key ) ?>">
 					<span class="name"><?php echo $label ?></span>
-					<input type="text" value="{{ data.<?php echo $key ?> || data.meta.<?php echo $key ?> || '' }}" />
+					<input type="text" value="{{ data.<?php echo $key ?>|| data.meta.<?php echo $key ?>|| '' }}" />
 				</label>
 				<?php endforeach; ?>
 				<# } #>
@@ -530,7 +530,7 @@ function wp_print_media_templates() {
 				<# } #>
 
 				<# if ( data.fileLength ) { #>
-					<div class="file-length"><?php _e( 'Length:' ); ?> {{ data.fileLength }}</div>
+					<div class="file-length"><?php _e( 'Length:' ); ?>{{ data.fileLength }}</div>
 				<# } #>
 
 				<# if ( ! data.uploading && data.can.remove ) { #>
@@ -571,7 +571,7 @@ function wp_print_media_templates() {
 		) as $key => $label ) : ?>
 		<label class="setting" data-setting="<?php echo esc_attr( $key ) ?>">
 			<span class="name"><?php echo $label ?></span>
-			<input type="text" value="{{ data.<?php echo $key ?> || data.meta.<?php echo $key ?> || '' }}" />
+			<input type="text" value="{{ data.<?php echo $key ?>|| data.meta.<?php echo $key ?>|| '' }}" />
 		</label>
 		<?php endforeach; ?>
 		<# } #>
@@ -702,7 +702,7 @@ function wp_print_media_templates() {
 						var size = data.sizes['<?php echo esc_js( $value ); ?>'];
 						if ( size ) { #>
 							<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, 'full' ); ?>>
-								<?php echo esc_html( $name ); ?> &ndash; {{ size.width }} &times; {{ size.height }}
+								<?php echo esc_html( $name ); ?>&ndash; {{ size.width }} &times; {{ size.height }}
 							</option>
 						<# } #>
 					<?php endforeach; ?>
@@ -742,7 +742,7 @@ function wp_print_media_templates() {
 				data-setting="columns">
 				<?php for ( $i = 1; $i <= 9; $i++ ) : ?>
 					<option value="<?php echo esc_attr( $i ); ?>" <#
-						if ( <?php echo $i ?> == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+						if ( <?php echo $i ?>== wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
 					#>>
 						<?php echo esc_html( $i ); ?>
 					</option>
@@ -951,7 +951,7 @@ function wp_print_media_templates() {
 										var size = data.sizes['<?php echo esc_js( $value ); ?>'];
 										if ( size ) { #>
 											<option value="<?php echo esc_attr( $value ); ?>">
-												<?php echo esc_html( $name ); ?> &ndash; {{ size.width }} &times; {{ size.height }}
+												<?php echo esc_html( $name ); ?>&ndash; {{ size.width }} &times; {{ size.height }}
 											</option>
 										<# } #>
 									<?php endforeach; ?>
@@ -962,7 +962,7 @@ function wp_print_media_templates() {
 							</label>
 						<# } #>
 							<div class="custom-size<# if ( data.model.size !== 'custom' ) { #> hidden<# } #>">
-								<label><span><?php _e( 'Width' ); ?> <small>(px)</small></span> <input data-setting="customWidth" type="number" step="1" value="{{ data.model.customWidth }}" /></label><span class="sep">&times;</span><label><span><?php _e( 'Height' ); ?> <small>(px)</small></span><input data-setting="customHeight" type="number" step="1" value="{{ data.model.customHeight }}" /></label>
+								<label><span><?php _e( 'Width' ); ?><small>(px)</small></span> <input data-setting="customWidth" type="number" step="1" value="{{ data.model.customWidth }}" /></label><span class="sep">&times;</span><label><span><?php _e( 'Height' ); ?><small>(px)</small></span><input data-setting="customHeight" type="number" step="1" value="{{ data.model.customHeight }}" /></label>
 							</div>
 					<# } #>
 
@@ -1054,14 +1054,14 @@ function wp_print_media_templates() {
 				<?php
 
 				foreach ( $audio_types as $type ):
-				?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) {
-					if ( ! _.isUndefined( html5types.<?php echo $type ?> ) ) {
+				?><# if ( ! _.isEmpty( data.model.<?php echo $type ?>) ) {
+					if ( ! _.isUndefined( html5types.<?php echo $type ?>) ) {
 						delete html5types.<?php echo $type ?>;
 					}
 				#>
 				<label class="setting">
 					<span><?php echo strtoupper( $type ) ?></span>
-					<input type="text" disabled="disabled" data-setting="<?php echo $type ?>" value="{{ data.model.<?php echo $type ?> }}" />
+					<input type="text" disabled="disabled" data-setting="<?php echo $type ?>" value="{{ data.model.<?php echo $type ?>}}" />
 					<button type="button" class="button-link remove-setting"><?php _e( 'Remove audio source' ); ?></button>
 				</label>
 				<# } #>
@@ -1135,14 +1135,14 @@ function wp_print_media_templates() {
 				</label>
 				<# } #>
 				<?php foreach ( $video_types as $type ):
-				?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) {
-					if ( ! _.isUndefined( html5types.<?php echo $type ?> ) ) {
+				?><# if ( ! _.isEmpty( data.model.<?php echo $type ?>) ) {
+					if ( ! _.isUndefined( html5types.<?php echo $type ?>) ) {
 						delete html5types.<?php echo $type ?>;
 					}
 				#>
 				<label class="setting">
 					<span><?php echo strtoupper( $type ) ?></span>
-					<input type="text" disabled="disabled" data-setting="<?php echo $type ?>" value="{{ data.model.<?php echo $type ?> }}" />
+					<input type="text" disabled="disabled" data-setting="<?php echo $type ?>" value="{{ data.model.<?php echo $type ?>}}" />
 					<button type="button" class="button-link remove-setting"><?php _e( 'Remove video source' ); ?></button>
 				</label>
 				<# } #>

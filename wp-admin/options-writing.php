@@ -61,9 +61,9 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <th scope="row"><?php _e('Formatting') ?></th>
 <td><fieldset><legend class="screen-reader-text"><span><?php _e('Formatting') ?></span></legend>
 <label for="use_smilies">
-<input name="use_smilies" type="checkbox" id="use_smilies" value="1" <?php checked('1', get_option('use_smilies')); ?> />
+<input name="use_smilies" type="checkbox" id="use_smilies" value="1" <?php checked('1', get_option('use_smilies')); ?>/>
 <?php _e('Convert emoticons like <code>:-)</code> and <code>:-P</code> to graphics on display') ?></label><br />
-<label for="use_balanceTags"><input name="use_balanceTags" type="checkbox" id="use_balanceTags" value="1" <?php checked('1', get_option('use_balanceTags')); ?> /> <?php _e('WordPress should correct invalidly nested XHTML automatically') ?></label>
+<label for="use_balanceTags"><input name="use_balanceTags" type="checkbox" id="use_balanceTags" value="1" <?php checked('1', get_option('use_balanceTags')); ?>/> <?php _e('WordPress should correct invalidly nested XHTML automatically') ?></label>
 </fieldset></td>
 </tr>
 <?php endif; ?>
@@ -85,7 +85,7 @@ unset( $post_formats['standard'] );
 	<select name="default_post_format" id="default_post_format">
 		<option value="0"><?php echo get_post_format_string( 'standard' ); ?></option>
 <?php foreach ( $post_formats as $format_slug => $format_name ): ?>
-		<option<?php selected( get_option( 'default_post_format' ), $format_slug ); ?> value="<?php echo esc_attr( $format_slug ); ?>"><?php echo esc_html( $format_name ); ?></option>
+		<option<?php selected( get_option( 'default_post_format' ), $format_slug ); ?>value="<?php echo esc_attr( $format_slug ); ?>"><?php echo esc_html( $format_name ); ?></option>
 <?php endforeach; ?>
 	</select>
 </td>

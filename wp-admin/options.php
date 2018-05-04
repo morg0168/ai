@@ -285,7 +285,7 @@ foreach ( (array) $options as $option ) :
 		echo esc_textarea( $value );
 	?></textarea>
 	<?php else: ?>
-		<input class="regular-text <?php echo $class ?>" type="text" name="<?php echo $name ?>" id="<?php echo $name ?>" value="<?php echo esc_attr( $value ) ?>"<?php disabled( $disabled, true ) ?> />
+		<input class="regular-text <?php echo $class ?>" type="text" name="<?php echo $name ?>" id="<?php echo $name ?>" value="<?php echo esc_attr( $value ) ?>"<?php disabled( $disabled, true ) ?>/>
 	<?php endif ?></td>
 </tr>
 <?php endforeach; ?>

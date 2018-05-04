@@ -211,7 +211,7 @@ function wp_popular_terms_checklist( $taxonomy, $default = 0, $number = 10, $ech
 
 		<li id="<?php echo $id; ?>" class="popular-category">
 			<label class="selectit">
-				<input id="in-<?php echo $id; ?>" type="checkbox" <?php echo $checked; ?> value="<?php echo (int) $term->term_id; ?>" <?php disabled( ! current_user_can( $tax->cap->assign_terms ) ); ?> />
+				<input id="in-<?php echo $id; ?>" type="checkbox" <?php echo $checked; ?>value="<?php echo (int) $term->term_id; ?>" <?php disabled( ! current_user_can( $tax->cap->assign_terms ) ); ?>/>
 				<?php
 				/** This filter is documented in wp-includes/category-template.php */
 				echo esc_html( apply_filters( 'the_category', $term->name, '', '' ) );
@@ -469,10 +469,10 @@ function wp_comment_reply( $position = 1, $checkbox = false, $mode = 'single', $
 function wp_comment_trashnotice() {
 ?>
 <div class="hidden" id="trash-undo-holder">
-	<div class="trash-undo-inside"><?php printf(__('Comment by %s moved to the trash.'), '<strong></strong>'); ?> <span class="undo untrash"><a href="#"><?php _e('Undo'); ?></a></span></div>
+	<div class="trash-undo-inside"><?php printf(__('Comment by %s moved to the trash.'), '<strong></strong>'); ?><span class="undo untrash"><a href="#"><?php _e('Undo'); ?></a></span></div>
 </div>
 <div class="hidden" id="spam-undo-holder">
-	<div class="spam-undo-inside"><?php printf(__('Comment by %s marked as spam.'), '<strong></strong>'); ?> <span class="undo unspam"><a href="#"><?php _e('Undo'); ?></a></span></div>
+	<div class="spam-undo-inside"><?php printf(__('Comment by %s marked as spam.'), '<strong></strong>'); ?><span class="undo unspam"><a href="#"><?php _e('Undo'); ?></a></span></div>
 </div>
 <?php
 }
@@ -1173,7 +1173,7 @@ function do_accordion_sections( $screen, $context, $object ) {
 						$open_class = 'open';
 					}
 					?>
-					<li class="control-section accordion-section <?php echo $hidden_class; ?> <?php echo $open_class; ?> <?php echo esc_attr( $box['id'] ); ?>" id="<?php echo esc_attr( $box['id'] ); ?>">
+					<li class="control-section accordion-section <?php echo $hidden_class; ?><?php echo $open_class; ?><?php echo esc_attr( $box['id'] ); ?>" id="<?php echo esc_attr( $box['id'] ); ?>">
 						<h3 class="accordion-section-title hndle" tabindex="0">
 							<?php echo esc_html( $box['title'] ); ?>
 							<span class="screen-reader-text"><?php _e( 'Press return or enter to open this section' ); ?></span>
@@ -1624,7 +1624,7 @@ function iframe_header( $title = '', $deprecated = false ) {
 	@header( 'Content-Type: ' . get_option( 'html_type' ) . '; charset=' . get_option( 'blog_charset' ) );
 	_wp_admin_html_begin();
 ?>
-<title><?php bloginfo('name') ?> &rsaquo; <?php echo $title ?> &#8212; <?php _e('WordPress'); ?></title>
+<title><?php bloginfo('name') ?>&rsaquo; <?php echo $title ?>&#8212; <?php _e('WordPress'); ?></title>
 <?php
 wp_enqueue_style( 'colors' );
 ?>
@@ -1676,7 +1676,7 @@ $admin_body_classes = apply_filters( 'admin_body_class', '' );
 /**
  * @global string $body_id
  */
-if ( isset($GLOBALS['body_id']) ) echo ' id="' . $GLOBALS['body_id'] . '"'; ?> class="wp-admin wp-core-ui no-js iframe <?php echo $admin_body_classes . ' ' . $admin_body_class; ?>">
+if ( isset($GLOBALS['body_id']) ) echo ' id="' . $GLOBALS['body_id'] . '"'; ?>class="wp-admin wp-core-ui no-js iframe <?php echo $admin_body_classes . ' ' . $admin_body_class; ?>">
 <script type="text/javascript">
 (function(){
 var c = document.body.className;
@@ -2045,13 +2045,13 @@ function _wp_admin_html_begin() {
 	 * @since 2.2.0
 	 */
 	do_action( 'admin_xml_ns' );
-?> <?php language_attributes(); ?>>
+?><?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 8) ]><!-->
 <html xmlns="http://www.w3.org/1999/xhtml" class="<?php echo $admin_html_class; ?>" <?php
 	/** This action is documented in wp-admin/includes/template.php */
 	do_action( 'admin_xml_ns' );
-?> <?php language_attributes(); ?>>
+?><?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />

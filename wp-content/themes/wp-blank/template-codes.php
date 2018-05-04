@@ -3,6 +3,15 @@
 <main id="barba-wrapper">
     <div class="barba-container" data-next="index.html">
         <div class="bc-inner codes">
+
+          <?php the_content() ?>
+
+          <?php
+          //password protect everything else inside
+          if ( !post_password_required() ) {
+                  echo 'protected stuff';
+          }
+      ?>
             <!-- section 1 -->
             <section class="section-001 hero o-container" id="section-001">
                 <div class="c-main_wrap diff row">

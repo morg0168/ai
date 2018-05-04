@@ -30,7 +30,7 @@ echo '<?xml version="1.0"?'.">\n";
 			/* translators: 1: Site name */
 			printf( __('Links for %s'), esc_attr(get_bloginfo('name', 'display')) );
 		?></title>
-		<dateCreated><?php echo gmdate("D, d M Y H:i:s"); ?> GMT</dateCreated>
+		<dateCreated><?php echo gmdate("D, d M Y H:i:s"); ?>GMT</dateCreated>
 		<?php
 		/**
 		 * Fires in the OPML header.

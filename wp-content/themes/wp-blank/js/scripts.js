@@ -1,106 +1,96 @@
 // (function ($, root, undefined) {
-	
+
 // 	$(function () {
-		
+
 // 		'use strict';
 // 		console.log('test');
-		
+
 // 	});
-	
+
 // })(jQuery, this);
 
 
 //barba start
-var barbaStart = function () {
-        var lastElementClicked;
-        // var PrevLink = document.querySelector('a.prev');
-        var NextLink = document.querySelector('a.ajaxlink');
-        Barba.Pjax.init({
-            smoothScrolling: true
-        });
-        Barba.Prefetch.init();
-        Barba.Dispatcher.on('linkClicked', function (el) {
-            lastElementClicked = el;
-        });
-        var isAnimating = false;
-        var MovePage = Barba.BaseTransition.extend({
-            start: function () {
-                isAnimating = true;
-                Promise.all([this.newContainerLoading, this.scrollTop()]).then(this.movePages.bind(this));
-            }
-            , scrollTop: function () {
-                var deferred = Barba.Utils.deferred();
-                var obj = {
-                    y: window.pageYOffset
-                };
-                TweenLite.to(obj, 0.8, {
-                    y: 0
-                    , onUpdate: function () {
-                        if (obj.y === 0) {
-                            deferred.resolve();
-                        }
-                        window.scroll(0, obj.y);
-                        $(this.oldContainer).animate({
-                            opacity: 0
-                        });
-                    }
-                    , onComplete: function () {
-                        deferred.resolve();
-                        pdfWatcher();
-                        skrollrStart();
-                        onscreenStart();
-                    }
-                });
-                return deferred.promise;
-            }
-            , movePages: function () {
-                var _this = this;
-                var $el = $(this.newContainer);
-                $(this.oldContainer).hide();
-                $el.css({
-                    visibility: 'visible'
-                    , opacity: 0
-                });
-                $el.animate({
-                    opacity: 1
-                }, 400, function () {
-                    /**
-                     * Do not forget to call .done() as soon your transition is finished!
-                     * .done() will automatically remove from the DOM the old Container
-                     */
-                    _this.done();
-                });
-                //                TweenLite.set(this.oldContainer, {
-                //                    visibility: 'hidden'
-                //                    , opacity: 1
-                //                });
-                //                TweenLite.set(this.newContainer, {
-                //                    visibility: 'visible'
-                //                    , opacity: 0
-                //                });
-                //                tl.add('start');
-                //                tl.to(this.oldContainer, 0.3, {
-                //                    opacity: 0
-                //                    , visibility: 'hidden'
-                //                }, 'start');
-                //                tl.to(this.newContainer, 0.6, {
-                //                    opacity: 1
-                //                });
-            }
-            , getNewPageFile: function () {
-                return Barba.HistoryManager.currentStatus().url.split('/').pop();
-            }
-        });
-        Barba.Pjax.getTransition = function () {
-            return MovePage;
-        };
-        Barba.Dispatcher.on('transitionCompleted', function () {
-            skrollr.get().refresh();
-        });
-    }
+// var barbaStart = function () {
+//         var lastElementClicked;
+//         // var PrevLink = document.querySelector('a.prev');
+//         var NextLink = document.querySelector('a.ajaxlink');
+//         Barba.Pjax.init({
+//             smoothScrolling: true
+//         });
+//         Barba.Prefetch.init();
+//         Barba.Dispatcher.on('linkClicked', function (el) {
+//             lastElementClicked = el;
+//         });
+//         var isAnimating = false;
+//         var MovePage = Barba.BaseTransition.extend({
+//             start: function () {
+//                 isAnimating = true;
+//                 Promise.all([this.newContainerLoading, this.scrollTop()]).then(this.movePages.bind(this));
+//             }
+//             , scrollTop: function () {
+//                 var deferred = Barba.Utils.deferred();
+//                 var obj = {
+//                     y: window.pageYOffset
+//                 };
+//                 TweenLite.to(obj, 0.8, {
+//                     y: 0
+//                     , onUpdate: function () {
+//                         if (obj.y === 0) {
+//                             deferred.resolve();
+//                         }
+//                         window.scroll(0, obj.y);
+//                         $(this.oldContainer).animate({
+//                             opacity: 0
+//                         });
+//                     }
+//                     , onComplete: function () {
+//                         deferred.resolve();
+//                         pdfWatcher();
+//                         skrollrStart();
+//                         onscreenStart();
+//                     }
+//                 });
+//                 return deferred.promise;
+//             }
+//             , movePages: function () {
+//                 var _this = this;
+//                 var $el = $(this.newContainer);
+//                 $(this.oldContainer).hide();
+//                 $el.css({
+//                     visibility: 'visible'
+//                     , opacity: 0
+//                 });
+//                 $el.animate({
+//                     opacity: 1
+//                 }, 400, function () {
+//                     /**
+//                      * Do not forget to call .done() as soon your transition is finished!
+//                      * .done() will automatically remove from the DOM the old Container
+//                      */
+//                     _this.done();
+//                 });
+//
+//             }
+//             , getNewPageFile: function () {
+//                 return Barba.HistoryManager.currentStatus().url.split('/').pop();
+//             }
+//         });
+//         Barba.Pjax.getTransition = function () {
+//             return MovePage;
+//         };
+//         Barba.Dispatcher.on('transitionCompleted', function () {
+//             skrollr.get().refresh();
+//         });
+//     }
 
 // document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
+
+	pdfWatcher();
+	skrollrStart();
+	onscreenStart();
+	  skrollr.get().refresh();
 
 	$('.o-button').addClass('-loaded');
     $('.c-header_main_logo_link').addClass('-loaded');
@@ -108,14 +98,14 @@ document.addEventListener("DOMContentLoaded", function () {
     $('.c-header_img_contain').addClass('-loaded');
 
     //init skrollr on page load if not homepage
-    if (window.location.href.indexOf('index') > -1) {
+  //  if (window.location.href.indexOf('index') > -1) {
     	languageChosen();
-    }
+  //  }
     //else {
         skrollrStart();
         onscreenStart();
    // }
-    barbaStart();
+  //  barbaStart();
     //scroll to top when top button clicked
     $('.c-header_scrolltop').click(function () {
         $('html,body').animate({
@@ -123,19 +113,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 'slow');
     });
     //language switcher
-    $('.french, .english').click(function () {
-        $('.c-loader_contain').remove();
+    // $('.french, .english').click(function () {
+    //     $('.c-loader_contain').remove();
         $('body').removeClass('-modal-open');
-        languageChosen();
-        skrollrStart();
-        onscreenStart();
-    });
+    //     languageChosen();
+    //     skrollrStart();
+    //     onscreenStart();
+    // });
     $('#js-toggle_menu, .c-nav_main_list li a').click(function () {
         toggleNav();
     });
-    //onscreen for mobile 
+    //onscreen for mobile
     //var os = new OnScreen();
-    //navigation height 
+    //navigation height
     var toggleNav = function () {
             if ($(window).width() < 768) {
                 el = $('#js-nav');
@@ -234,10 +224,10 @@ var onscreenStart = function () {
 }
 
 function languageChosen() {
-    $('.o-button').addClass('-loaded');
-    $('.c-header_main_logo_link').addClass('-loaded');
-    $('.c-nav_main_item').addClass('-loaded');
-    $('.c-header_img_contain').addClass('-loaded');
+    // $('.o-button').addClass('-loaded');
+    // $('.c-header_main_logo_link').addClass('-loaded');
+    // $('.c-nav_main_item').addClass('-loaded');
+    // $('.c-header_img_contain').addClass('-loaded');
 }
 //Switch header look and feel when scrolled
 var header = $('.c-header');
@@ -250,5 +240,3 @@ $(window).scroll(function () {
         header.removeClass('c-header_scrolled').addClass('c-header_static');
     }
 });
-
-	

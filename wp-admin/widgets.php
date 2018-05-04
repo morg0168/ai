@@ -391,7 +391,7 @@ do_action( 'widgets_admin_page' ); ?>
 				<span class="screen-reader-text"><?php _e( 'Available Widgets' ); ?></span>
 				<span class="toggle-indicator" aria-hidden="true"></span>
 			</button>
-			<h2><?php _e( 'Available Widgets' ); ?> <span id="removing-widget"><?php _ex( 'Deactivate', 'removing-widget' ); ?> <span></span></span></h2>
+			<h2><?php _e( 'Available Widgets' ); ?><span id="removing-widget"><?php _ex( 'Deactivate', 'removing-widget' ); ?><span></span></span></h2>
 		</div>
 		<div class="widget-holder">
 			<div class="sidebar-description">

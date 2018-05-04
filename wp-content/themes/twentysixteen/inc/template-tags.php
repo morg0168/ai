@@ -161,7 +161,7 @@ if ( ! function_exists( 'twentysixteen_excerpt' ) ) :
 		if ( has_excerpt() || is_search() ) : ?>
 			<div class="<?php echo $class; ?>">
 				<?php the_excerpt(); ?>
-			</div><!-- .<?php echo $class; ?> -->
+			</div><!-- .<?php echo $class; ?>-->
 		<?php endif;
 	}
 endif;

@@ -62,7 +62,7 @@ if ( $wp_customize->changeset_post_id() ) {
 		?>
 		<?php wp_print_scripts( array( 'wp-util' ) ); ?>
 		<script>
-			wp.ajax.post( 'customize_save', <?php echo wp_json_encode( $request_args ); ?> );
+			wp.ajax.post( 'customize_save', <?php echo wp_json_encode( $request_args ); ?>);
 		</script>
 		<?php
 		$script = ob_get_clean();

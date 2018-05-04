@@ -530,11 +530,11 @@ function install_plugin_information() {
 		?>
 		<style type="text/css">
 			#plugin-information-title.with-banner {
-				background-image: url( <?php echo esc_url( $low ); ?> );
+				background-image: url( <?php echo esc_url( $low ); ?>);
 			}
 			@media only screen and ( -webkit-min-device-pixel-ratio: 1.5 ) {
 				#plugin-information-title.with-banner {
-					background-image: url( <?php echo esc_url( $high ); ?> );
+					background-image: url( <?php echo esc_url( $high ); ?>);
 				}
 			}
 		</style>

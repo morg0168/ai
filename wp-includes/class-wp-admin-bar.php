@@ -495,36 +495,36 @@ class WP_Admin_Bar {
 
 		<li id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>"<?php echo $menuclass; ?>><?php
 			if ( $has_link ):
-				?><a class="ab-item"<?php echo $aria_attributes; ?> href="<?php echo esc_url( $node->href ) ?>"<?php
+				?><a class="ab-item"<?php echo $aria_attributes; ?>href="<?php echo esc_url( $node->href ) ?>"<?php
 					if ( ! empty( $node->meta['onclick'] ) ) :
-						?> onclick="<?php echo esc_js( $node->meta['onclick'] ); ?>"<?php
+						?>onclick="<?php echo esc_js( $node->meta['onclick'] ); ?>"<?php
 					endif;
 				if ( ! empty( $node->meta['target'] ) ) :
-					?> target="<?php echo esc_attr( $node->meta['target'] ); ?>"<?php
+					?>target="<?php echo esc_attr( $node->meta['target'] ); ?>"<?php
 				endif;
 				if ( ! empty( $node->meta['title'] ) ) :
-					?> title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
+					?>title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
 				endif;
 				if ( ! empty( $node->meta['rel'] ) ) :
-					?> rel="<?php echo esc_attr( $node->meta['rel'] ); ?>"<?php
+					?>rel="<?php echo esc_attr( $node->meta['rel'] ); ?>"<?php
 				endif;
 				if ( ! empty( $node->meta['lang'] ) ) :
-					?> lang="<?php echo esc_attr( $node->meta['lang'] ); ?>"<?php
+					?>lang="<?php echo esc_attr( $node->meta['lang'] ); ?>"<?php
 				endif;
 				if ( ! empty( $node->meta['dir'] ) ) :
-					?> dir="<?php echo esc_attr( $node->meta['dir'] ); ?>"<?php
+					?>dir="<?php echo esc_attr( $node->meta['dir'] ); ?>"<?php
 				endif;
 				?>><?php
 			else:
 				?><div class="ab-item ab-empty-item"<?php echo $aria_attributes;
 				if ( ! empty( $node->meta['title'] ) ) :
-					?> title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
+					?>title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
 				endif;
 				if ( ! empty( $node->meta['lang'] ) ) :
-					?> lang="<?php echo esc_attr( $node->meta['lang'] ); ?>"<?php
+					?>lang="<?php echo esc_attr( $node->meta['lang'] ); ?>"<?php
 				endif;
 				if ( ! empty( $node->meta['dir'] ) ) :
-					?> dir="<?php echo esc_attr( $node->meta['dir'] ); ?>"<?php
+					?>dir="<?php echo esc_attr( $node->meta['dir'] ); ?>"<?php
 				endif;
 				?>><?php
 			endif;

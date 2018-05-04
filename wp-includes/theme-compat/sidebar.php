@@ -31,7 +31,7 @@ _deprecated_file(
 
 			<?php if ( is_404() || is_category() || is_day() || is_month() ||
 						is_year() || is_search() || is_paged() ) :
-			?> <li>
+			?><li>
 
 			<?php if ( is_404() ) : /* If this is a 404 page */ ?>
 			<?php elseif ( is_category() ) : /* If this is a category archive */ ?>

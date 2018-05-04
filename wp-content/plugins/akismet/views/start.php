@@ -81,7 +81,7 @@
 				<?php } ?>
 				<div class="akismet-box">
 					<h3><?php esc_html_e( 'Or enter an API key', 'akismet' ); ?></h3>
-					<p><?php esc_html_e( 'Already have your key? Enter it here.', 'akismet' ); ?> <a href="https://docs.akismet.com/getting-started/api-key/" target="_blank"><?php esc_html_e( '(What is an API key?)', 'akismet' ); ?></a></p>
+					<p><?php esc_html_e( 'Already have your key? Enter it here.', 'akismet' ); ?><a href="https://docs.akismet.com/getting-started/api-key/" target="_blank"><?php esc_html_e( '(What is an API key?)', 'akismet' ); ?></a></p>
 					<form action="<?php echo esc_url( Akismet_Admin::get_page_url() ); ?>" method="post">
 						<?php wp_nonce_field( Akismet_Admin::NONCE ) ?>
 						<input type="hidden" name="action" value="enter-key">

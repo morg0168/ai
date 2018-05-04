@@ -174,11 +174,11 @@ function show_blog_form( $blogname = '', $blog_title = '', $errors = '' ) {
             <?php _e( 'Allow search engines to index this site.' ); ?>
             <br style="clear:both" />
             <label class="checkbox" for="blog_public_on">
-                <input type="radio" id="blog_public_on" name="blog_public" value="1" <?php if ( !isset( $_POST['blog_public'] ) || $_POST['blog_public'] == '1' ) { ?>checked="checked"<?php } ?> />
+                <input type="radio" id="blog_public_on" name="blog_public" value="1" <?php if ( !isset( $_POST['blog_public'] ) || $_POST['blog_public'] == '1' ) { ?>checked="checked"<?php } ?>/>
                 <strong><?php _e( 'Yes' ); ?></strong>
             </label>
             <label class="checkbox" for="blog_public_off">
-                <input type="radio" id="blog_public_off" name="blog_public" value="0" <?php if ( isset( $_POST['blog_public'] ) && $_POST['blog_public'] == '0' ) { ?>checked="checked"<?php } ?> />
+                <input type="radio" id="blog_public_off" name="blog_public" value="0" <?php if ( isset( $_POST['blog_public'] ) && $_POST['blog_public'] == '0' ) { ?>checked="checked"<?php } ?>/>
                 <strong><?php _e( 'No' ); ?></strong>
             </label>
         </p>
@@ -551,10 +551,10 @@ function signup_user( $user_name = '', $user_email = '', $errors = '' ) {
 		<?php } elseif ( $active_signup == 'user' ) { ?>
 			<input id="signupblog" type="hidden" name="signup_for" value="user" />
 		<?php } else { ?>
-			<input id="signupblog" type="radio" name="signup_for" value="blog" <?php checked( $signup_for, 'blog' ); ?> />
+			<input id="signupblog" type="radio" name="signup_for" value="blog" <?php checked( $signup_for, 'blog' ); ?>/>
 			<label class="checkbox" for="signupblog"><?php _e('Gimme a site!') ?></label>
 			<br />
-			<input id="signupuser" type="radio" name="signup_for" value="user" <?php checked( $signup_for, 'user' ); ?> />
+			<input id="signupuser" type="radio" name="signup_for" value="user" <?php checked( $signup_for, 'user' ); ?>/>
 			<label class="checkbox" for="signupuser"><?php _e('Just a username, please.') ?></label>
 		<?php } ?>
 		</p>

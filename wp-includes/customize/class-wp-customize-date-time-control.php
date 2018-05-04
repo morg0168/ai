@@ -110,7 +110,7 @@ class WP_Customize_Date_Time_Control extends WP_Customize_Control {
 		}
 		?>
 
-		<# _.defaults( data, <?php echo wp_json_encode( $data ); ?> ); #>
+		<# _.defaults( data, <?php echo wp_json_encode( $data ); ?>); #>
 		<# var idPrefix = _.uniqueId( 'el' ) + '-'; #>
 
 		<# if ( data.label ) { #>

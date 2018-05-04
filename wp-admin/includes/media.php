@@ -252,7 +252,7 @@ function media_send_to_editor($html) {
 ?>
 <script type="text/javascript">
 var win = window.dialogArguments || opener || parent || top;
-win.send_to_editor( <?php echo wp_json_encode( $html ); ?> );
+win.send_to_editor( <?php echo wp_json_encode( $html ); ?>);
 </script>
 <?php
 	exit;
@@ -461,7 +461,7 @@ function media_handle_sideload( $file_array, $post_id, $desc = null, $post_data 
 function wp_iframe($content_func /* ... */) {
 	_wp_admin_html_begin();
 ?>
-<title><?php bloginfo('name') ?> &rsaquo; <?php _e('Uploads'); ?> &#8212; <?php _e('WordPress'); ?></title>
+<title><?php bloginfo('name') ?>&rsaquo; <?php _e('Uploads'); ?>&#8212; <?php _e('WordPress'); ?></title>
 <?php
 
 wp_enqueue_style( 'colors' );
@@ -527,7 +527,7 @@ if ( is_string( $content_func ) ) {
 }
 ?>
 </head>
-<body<?php if ( isset($GLOBALS['body_id']) ) echo ' id="' . $GLOBALS['body_id'] . '"'; ?> class="wp-core-ui no-js">
+<body<?php if ( isset($GLOBALS['body_id']) ) echo ' id="' . $GLOBALS['body_id'] . '"'; ?>class="wp-core-ui no-js">
 <script type="text/javascript">
 document.body.className = document.body.className.replace('no-js', 'js');
 </script>
@@ -2475,7 +2475,7 @@ $selected_month = isset( $_GET['m'] ) ? $_GET['m'] : 0;
 
 if ( $month_count && !( 1 == $month_count && 0 == $arc_result[0]->mmonth ) ) { ?>
 <select name='m'>
-<option<?php selected( $selected_month, 0 ); ?> value='0'><?php _e( 'All dates' ); ?></option>
+<option<?php selected( $selected_month, 0 ); ?>value='0'><?php _e( 'All dates' ); ?></option>
 <?php
 foreach ($arc_result as $arc_row) {
 	if ( $arc_row->yyear == 0 )
@@ -2693,7 +2693,7 @@ function media_upload_max_image_resize() {
 	}
 ?>
 <p class="hide-if-no-js"><label>
-<input name="image_resize" type="checkbox" id="image_resize" value="true"<?php echo $checked; ?> />
+<input name="image_resize" type="checkbox" id="image_resize" value="true"<?php echo $checked; ?>/>
 <?php
 	/* translators: %1$s is link start tag, %2$s is link end tag, %3$d is width, %4$d is height*/
 	printf( __( 'Scale images to match the large size selected in %1$simage options%2$s (%3$d &times; %4$d).' ), $a, $end, (int) get_option( 'large_size_w', '1024' ), (int) get_option( 'large_size_h', '1024' ) );
@@ -2742,11 +2742,11 @@ function edit_form_image_editor( $post ) {
 
 		<div class="imgedit-response" id="imgedit-response-<?php echo $attachment_id; ?>"></div>
 
-		<div<?php if ( $open ) echo ' style="display:none"'; ?> class="wp_attachment_image wp-clearfix" id="media-head-<?php echo $attachment_id; ?>">
+		<div<?php if ( $open ) echo ' style="display:none"'; ?>class="wp_attachment_image wp-clearfix" id="media-head-<?php echo $attachment_id; ?>">
 			<p id="thumbnail-head-<?php echo $attachment_id; ?>"><img class="thumbnail" src="<?php echo set_url_scheme( $thumb_url[0] ); ?>" style="max-width:100%" alt="" /></p>
 			<p><?php echo $image_edit_button; ?></p>
 		</div>
-		<div<?php if ( ! $open ) echo ' style="display:none"'; ?> class="image-editor" id="image-editor-<?php echo $attachment_id; ?>">
+		<div<?php if ( ! $open ) echo ' style="display:none"'; ?>class="image-editor" id="image-editor-<?php echo $attachment_id; ?>">
 			<?php if ( $open ) wp_image_editor( $attachment_id ); ?>
 		</div>
 	<?php
@@ -2866,10 +2866,10 @@ function attachment_submitbox_metadata() {
 		<input type="text" class="widefat urlfield" readonly="readonly" name="attachment_url" id="attachment_url" value="<?php echo esc_attr( $att_url ); ?>" />
 	</div>
 	<div class="misc-pub-section misc-pub-filename">
-		<?php _e( 'File name:' ); ?> <strong><?php echo $filename; ?></strong>
+		<?php _e( 'File name:' ); ?><strong><?php echo $filename; ?></strong>
 	</div>
 	<div class="misc-pub-section misc-pub-filetype">
-		<?php _e( 'File type:' ); ?> <strong><?php
+		<?php _e( 'File type:' ); ?><strong><?php
 			if ( preg_match( '/^.*?\.(\w+)$/', get_attached_file( $post->ID ), $matches ) ) {
 				echo esc_html( strtoupper( $matches[1] ) );
 				list( $mime_type ) = explode( '/', $post->post_mime_type );
@@ -2894,7 +2894,7 @@ function attachment_submitbox_metadata() {
 
 		if ( ! empty( $file_size ) ) : ?>
 			<div class="misc-pub-section misc-pub-filesize">
-				<?php _e( 'File size:' ); ?> <strong><?php echo size_format( $file_size ); ?></strong>
+				<?php _e( 'File size:' ); ?><strong><?php echo size_format( $file_size ); ?></strong>
 			</div>
 			<?php
 		endif;
@@ -2925,7 +2925,7 @@ function attachment_submitbox_metadata() {
 			}
 	?>
 		<div class="misc-pub-section misc-pub-mime-meta misc-pub-<?php echo sanitize_html_class( $key ); ?>">
-			<?php echo $label ?> <strong><?php
+			<?php echo $label ?><strong><?php
 				switch ( $key ) {
 					case 'bitrate' :
 						echo round( $meta['bitrate'] / 1000 ) . 'kb/s';
@@ -2967,7 +2967,7 @@ function attachment_submitbox_metadata() {
 			}
 	?>
 		<div class="misc-pub-section misc-pub-audio misc-pub-<?php echo sanitize_html_class( $key ); ?>">
-			<?php echo $label; ?> <strong><?php echo esc_html( $meta['audio'][$key] ); ?></strong>
+			<?php echo $label; ?><strong><?php echo esc_html( $meta['audio'][$key] ); ?></strong>
 		</div>
 	<?php
 		}
@@ -2976,7 +2976,7 @@ function attachment_submitbox_metadata() {
 
 	if ( $media_dims ) : ?>
 	<div class="misc-pub-section misc-pub-dimensions">
-		<?php _e( 'Dimensions:' ); ?> <strong><?php echo $media_dims; ?></strong>
+		<?php _e( 'Dimensions:' ); ?><strong><?php echo $media_dims; ?></strong>
 	</div>
 <?php
 	endif;
