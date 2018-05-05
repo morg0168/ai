@@ -25,10 +25,6 @@
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
-// if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-//   wp_enqueue_script('livereload');
-//     wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-// }
 
 if (!isset($content_width))
 {
@@ -76,7 +72,7 @@ function wpblank_nav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
+		'items_wrap'      => '<a>%3$s</a>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
@@ -289,7 +285,9 @@ function wpblankcomments($comment, $args, $depth)
 		$tag = 'li';
 		$add_below = 'div-comment';
 	}
-?><<?php echo $tag ?><?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?>id="comment-<?php comment_ID() ?>">
+?>
+
+    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
 	<?php if ( 'div' != $args['style'] ) : ?>
 	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 	<?php endif; ?>
@@ -327,10 +325,10 @@ function wpblankcomments($comment, $args, $depth)
 
 //Function de register redundant assets in header
 
-// function deregister_reddt_script() {
-//   wp_deregister_script( 'jquery' );
-// }
-// add_action( 'wp_print_scripts', 'deregister_reddt_script', 100 );
+function deregister_reddt_script() {
+  wp_deregister_script( '' );
+}
+add_action( 'wp_print_scripts', 'deregister_reddt_script', 100 );
 
 
 /*Remove contact form 7 styles*/
@@ -557,39 +555,39 @@ function display_home_block_meta()
       <textarea type="textarea" name="home_block[textarea]" id="home_block[textarea]" class="textarea-admin" >
       <?php if ( ! empty( $hp_block ) ) {
         echo $hp_block['textarea'];
-    } else{ ?>Edit  <?php }?>
+    } else{ ?> Edit  <?php }?>
       </textarea>
 	<?php }
 
 
   /*Save custom fields in DB*/
-function save_home_block_function( $post_id ) {
-	// verify nonce
-	// if ( !wp_verify_nonce( $_POST['home_block_nonce'], basename(__FILE__) ) ) {
-	// 	return $post_id;
-	// }
-	// check autosave
-	// if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-	// 	return $post_id;
-	// }
-	// // check permissions
-	// if ( 'page' === $_POST['post_type'] ) {
-	// 	if ( !current_user_can( 'edit_page', $post_id ) ) {
-	// 		return $post_id;
-	// 	} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
-	// 		return $post_id;
-	// 	}
-	// }
-	// $old = get_post_meta( $post_id, 'home_block', true );
-	// $new = $_POST['home_block'];
-  //
-	// if ( $new && $new !== $old ) {
-	// 	update_post_meta( $post_id, 'home_block', $new );
-	// } elseif ( '' === $new && $old ) {
-	// 	delete_post_meta( $post_id, 'home_block', $old );
-	// }
-}
-add_action( 'save_post', 'save_home_block_function' );
+// function save_home_block_function( $post_id ) {
+// 	// verify nonce
+// 	if ( !wp_verify_nonce( $_POST['home_block_nonce'], basename(__FILE__) ) ) {
+// 		return $post_id;
+// 	}
+// 	// check autosave
+// 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+// 		return $post_id;
+// 	}
+// 	// check permissions
+// 	if ( 'page' === $_POST['post_type'] ) {
+// 		if ( !current_user_can( 'edit_page', $post_id ) ) {
+// 			return $post_id;
+// 		} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
+// 			return $post_id;
+// 		}
+// 	}
+// 	$old = get_post_meta( $post_id, 'home_block', true );
+// 	$new = $_POST['home_block'];
+
+// 	if ( $new && $new !== $old ) {
+// 		update_post_meta( $post_id, 'home_block', $new );
+// 	} elseif ( '' === $new && $old ) {
+// 		delete_post_meta( $post_id, 'home_block', $old );
+// 	}
+// }
+// add_action( 'save_post', 'save_home_block_function' );
 
 
 /*------------------------------------*\
@@ -607,7 +605,8 @@ add_action( 'save_post', 'save_home_block_function' );
  /*Display custom fields in meta box*/
   function meta_seo_function(){
 	global $post;
-    $meta = get_post_meta( $post->ID, 'seo_desc' , true); ?><input type="hidden" name="meta_seo_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
+    $meta = get_post_meta( $post->ID, 'seo_desc' , true); ?>
+	<input type="hidden" name="meta_seo_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 <!--	<label for="seo_desc[text]">Add a meta description</label>-->
       <i>Meta description is also used for opengraph and twitter tag</i>
 	<br>
@@ -619,34 +618,35 @@ add_action( 'save_post', 'save_home_block_function' );
       <br>
 	<input type="text" name="seo_desc[text]" id="seo_desc[text]" class="input-admin" value="" placeholder="edit description">
 	<?php }
-  /*Save custom fields in DB*/
-  function save_meta_seo_function( $post_id ) {
-	// verify nonce
-	if ( !wp_verify_nonce( $_POST['meta_seo_nonce'], basename(__FILE__) ) ) {
-		return $post_id;
-	}
-	// check autosave
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-		return $post_id;
-	}
-	// check permissions
-	if ( 'page' === $_POST['post_type'] ) {
-		if ( !current_user_can( 'edit_page', $post_id ) ) {
-			return $post_id;
-		} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
-			return $post_id;
-		}
-	}
-	$old = get_post_meta( $post_id, 'seo_desc', true );
-	$new = $_POST['seo_desc'];
 
-	if ( $new && $new !== $old ) {
-		update_post_meta( $post_id, 'seo_desc', $new );
-	} elseif ( '' === $new && $old ) {
-		delete_post_meta( $post_id, 'seo_desc', $old );
-	}
-}
-add_action( 'save_post', 'save_meta_seo_function' );
+  /*Save custom fields in DB*/
+//   function save_meta_seo_function( $post_id ) {
+// 	// verify nonce
+// 	if ( !wp_verify_nonce( $_POST['meta_seo_nonce'], basename(__FILE__) ) ) {
+// 		return $post_id;
+// 	}
+// 	// check autosave
+// 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+// 		return $post_id;
+// 	}
+// 	// check permissions
+// 	if ( 'page' === $_POST['post_type'] ) {
+// 		if ( !current_user_can( 'edit_page', $post_id ) ) {
+// 			return $post_id;
+// 		} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
+// 			return $post_id;
+// 		}
+// 	}
+// 	$old = get_post_meta( $post_id, 'seo_desc', true );
+// 	$new = $_POST['seo_desc'];
+
+// 	if ( $new && $new !== $old ) {
+// 		update_post_meta( $post_id, 'seo_desc', $new );
+// 	} elseif ( '' === $new && $old ) {
+// 		delete_post_meta( $post_id, 'seo_desc', $old );
+// 	}
+// }
+// add_action( 'save_post', 'save_meta_seo_function' );
 
 
 
@@ -715,10 +715,9 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+?>
+<?php
 
-
-
-?><?php
 /*------------------------------------*\
 	Global custom key for social links
 \*------------------------------------*/
@@ -779,13 +778,17 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 		}
 
 
-		public static function create_admin_page() { ?><div class="wrap">
+		public static function create_admin_page() { ?>
+
+			<div class="wrap">
 
 				<h1><?php esc_html_e( 'Social', 'text-domain' ); ?></h1>
 
 				<form method="post" action="options.php">
 
-					<?php settings_fields( 'theme_options' ); ?><table class="form-table wpex-custom-admin-login-table">
+					<?php settings_fields( 'theme_options' ); ?>
+
+					<table class="form-table wpex-custom-admin-login-table">
 
 						<?php // Text input example ?>
 						<tr valign="top">
@@ -793,7 +796,8 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
                               <i class="fa fa-facebook"></i> <?php esc_html_e( 'Facebook url', 'text-domain' ); ?></th>
 							<td>
 
-								<?php $value = self::get_theme_option( 'facebook_url' ); ?><input type="text" name="theme_options[facebook_url]" value="<?php echo esc_attr( $value ); ?>">
+								<?php $value = self::get_theme_option( 'facebook_url' ); ?>
+								<input type="text" name="theme_options[facebook_url]" value="<?php echo esc_attr( $value ); ?>">
 							</td>
 						</tr>
 	                     <tr valign="top">
@@ -808,13 +812,16 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 							<th scope="row">
                               <i class="fa fa-linkedin"></i> <?php esc_html_e( 'Linkedin url', 'text-domain' ); ?></th>
 							<td>
-								<?php $value = self::get_theme_option( 'linkedin_url' ); ?><input type="text" name="theme_options[linkedin_url]" value="<?php echo esc_attr( $value ); ?>">
+								<?php $value = self::get_theme_option( 'linkedin_url' ); ?>
+								<input type="text" name="theme_options[linkedin_url]" value="<?php echo esc_attr( $value ); ?>">
 							</td>
 						</tr>
 
 					</table>
 
-					<?php submit_button(); ?></form>
+					<?php submit_button(); ?>
+
+				</form>
 
 			</div><!-- .wrap -->
 		<?php }
@@ -837,7 +844,9 @@ function myprefix_get_theme_option( $id = '' ) {
       // Replace Icons In admin
       add_action( 'admin_head', 'replace_admin_menu_icon' );
       function replace_admin_menu_icon() {
-?><style type="text/css">
+?>
+
+    <style type="text/css">
       .dashicons-admin-post:before, .dashicons-format-standard:before{
         content: '\f123';
       }
