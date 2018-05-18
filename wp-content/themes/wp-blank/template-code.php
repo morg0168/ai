@@ -1,4 +1,4 @@
-<?php /* Template Name: Codes */ get_header(); ?>
+<?php /* Template Name: Code */ get_header(); ?>
 
 <main id="barba-wrapper">
     <div class="barba-container" data-next="index.html">
@@ -12,16 +12,16 @@
 
             <!-- section 1 -->
             <section class="section-001 hero o-container" id="section-001">
-                <div class="c-main_wrap diff row middle-xs center-xs">
+                <div class="c-main_wrap diff row">
                     <div class="c-main_inner_home col-xs-12 col-sm-6">
                         <header class="c-home_header" data-center="@myAttr:-in-view box">
                             <div class="js-parallax">
                                 <div class="-overflow-hidden">
-                                    <h1><a href="<?php echo home_url(); ?>/code/">Saint Viateur Est</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">343 Ridgewood</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">50 Laurier Est</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">100 Sherbrooke Ouest</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">20 Parc Ave</a></h1>
+                                  <!--start Loop -->
+                                  <?php if (have_posts()): while (have_posts()): the_post();?>
+                                      <?php get_template_part('loop-code'); ?>
+                                  <?php endwhile; endif; ?>
+                                  <!--End Loop -->
                                 </div>
                             </div>
                         </header>
