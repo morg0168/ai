@@ -400,7 +400,6 @@ add_action('wp_enqueue_scripts', 'wpblank_styles');
 add_action( 'wp_footer', 'wpblank_enqueue_scripts' );
 
 add_action('init', 'register_wpblank_menu');
-add_action('init', 'create_post_type_wpblank');
 add_action('widgets_init', 'my_remove_recent_comments_style');
 add_action('init', 'wp_pagination');
 add_action( 'wp_footer', 'wpblank_deregister_scripts' );
@@ -443,53 +442,6 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 add_shortcode('wpblank_shortcode_demo', 'wpblank_shortcode_demo'); // You can place [wpblank_shortcode_demo] in Pages, Posts now.
 add_shortcode('wpblank_shortcode_demo_2', 'wpblank_shortcode_demo_2'); // Place [wpblank_shortcode_demo_2] in Pages, Posts now.
 
-
-
-
-
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
-
-// Create 1 Custom Post type for a Demo, called wp-blank
-function create_post_type_wpblank()
-{
-    register_taxonomy_for_object_type('category', 'wp-blank');
-    register_taxonomy_for_object_type('post_tag', 'wp-blank');
-    register_post_type('wp-blank',
-        array(
-        'labels' => array(
-            'name' => __(' Custom Post', 'wpblank'), // Rename these to suit will appear in permalink
-            'singular_name' => __('Custom Post', 'wpblank'),
-            'add_new' => __('Add New', 'wpblank'),
-            'add_new_item' => __('Add New  Custom Post', 'wpblank'),
-            'edit' => __('Edit', 'wpblank'),
-            'edit_item' => __('Edit Custom Post', 'wpblank'),
-            'new_item' => __('New  Custom Post', 'wpblank'),
-            'view' => __('View  Custom Post', 'wpblank'),
-            'view_item' => __('View  Custom Post', 'wpblank'),
-            'search_items' => __('Search  Custom Post', 'wpblank'),
-            'not_found' => __('No  Custom Posts found', 'wpblank'),
-            'not_found_in_trash' => __('No  Custom Posts found in Trash', 'wpblank')
-        ),
-        'public' => true,
-        'hierarchical' => true,
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'custom-fields',
-            'thumbnail'
-        ),
-        'can_export' => true,
-        'register_meta_box_cb' => 'add_seo'
-//        'taxonomies' => array(
-//            'post_tag',
-//            'category'
-//        )
-    ));
-}
 
 /*------------------------------------*\
 	ShortCode Functions
@@ -567,7 +519,7 @@ function wpblank_shortcode_demo_2($atts, $content = null) // Demo Heading H2 sho
 // }
 // add_action( 'save_post', 'save_meta_seo_function' );
 
-
+include('theme-functions/functions_code.php');
 
 
 /*------------------------------------*\
