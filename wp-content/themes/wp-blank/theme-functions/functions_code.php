@@ -33,192 +33,267 @@ function display_portal_block_meta()
 	<input type="hidden" name="portal_block_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 
     <div class="col-1-3">
-      <h4>Block #1</h4>
-      <label for="portal_block[title1]">Title - H2</label>
+      <h1>DOCUMENTS</h1>
+      <label for="portal_block[level1a]">SECTION </label>
       <br/>
-      <input type="text" name="portal_block[title1]" id="portal_block[title1]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['title1'];
-      } ?>" placeholder="Edit">
-      <br/>
-      <br/>
-      <label for="portal_block[icon1]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
-      <br/>
-      <input type="text" name="portal_block[icon1]" id="portal_block[icon1]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['icon1'];
+      <input type="text" name="portal_block[level1a]" id="portal_block[level1a]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['level1a'];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
 
-      <label for="portal_block[textarea1]">Text Content</label>
+<!--DOCUMENTS - BLOCK ONE-->
+
+      <?php
+          $max_posts = 9;
+          for ($i = 1; $i <= $max_posts; $i++) {
+             $keyname = 'l1name' . $i;
+             $keylink = 'l1link' . $i;
+      ?>
+      <label for="portal_block[<?php echo $keyname; ?>]">DOCUMENT NAME </label>
       <br/>
 
-        <textarea type="textarea" name="portal_block[textarea1]" id="portal_block[textarea1]" class="textarea-admin" >
-        <?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['textarea1'];
-        } else{ ?> Edit  <?php }?>
-        </textarea>
-      </div>
-
-      <div class="col-1-3">
-      <h4>Block #2</h4>
-      <label for="portal_block[title2]">Title - H2</label>
-      <br/>
-      <input type="text" name="portal_block[title2]" id="portal_block[title2]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['title2'];
+      <input type="text" name="portal_block[<?php echo $keyname; ?>]" id="portal_block[<?php echo $keyname; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l1name' . $i];
       } ?>" placeholder="Edit">
+
+      <label for="portal_block[<?php echo $keylink; ?>]">LINK </label>
       <br/>
-      <br/>
-      <label for="portal_block[icon2]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
-      <br/>
-      <input type="text" name="portal_block[icon2]" id="portal_block[icon2]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['icon2'];
+      <input type="text" name="portal_block[<?php echo $keylink; ?>]" id="portal_block[<?php echo $keylink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l1link' . $i];
       } ?>" placeholder="Edit">
-      <br/>
-      <br/>
+        <br/>
+        <br/>
+        <br/>
+    <?php } ?>
+</div>
 
-      <label for="portal_block[textarea2]">Text Content</label>
-      <br/>
+<!--FINANCES - BLOCK 2 :: A-->
+  <div class="col-1-3">
+      <h1>Finances</h1>
 
-        <textarea type="textarea" name="portal_block[textarea2]" id="portal_block[textarea2]" class="textarea-admin" >
-        <?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['textarea2'];
-        } else{ ?> Edit  <?php }?>
-        </textarea>  <br/>
-    </div>
-
-    <div class="col-1-3">
-        <h4>Block #3</h4>
-        <label for="portal_block[title3]">Title - H2</label>
+      <h3><label for="portal_block[level2a]">YEAR 1</label></h3>
         <br/>
-        <input type="text" name="portal_block[title3]" id="portal_block[title3]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-            echo $portal_block['title3'];
-        } ?>" placeholder="Edit">
-        <br/>
-        <br/>
-        <label for="portal_block[icon3]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
-        <br/>
-        <input type="text" name="portal_block[icon3]" id="portal_block[icon3]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-            echo $portal_block['icon3'];
+        <input type="text" name="portal_block[level2a]" id="portal_block[level2a]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['level2a'];
         } ?>" placeholder="Edit">
         <br/>
         <br/>
 
-        <label for="portal_block[textarea3]">Text Content</label>
+        <label for="portal_block[l2date1]">DATE </label>
+        <input type="text" name="portal_block[l2date1]" id="portal_block[l2date1]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2date1'];
+        } ?>" placeholder="Edit">
+        <br/>
         <br/>
 
-          <textarea type="textarea" name="portal_block[textarea3]" id="portal_block[textarea3]" class="textarea-admin" >
-          <?php if ( ! empty( $portal_block ) ) {
-            echo $portal_block['textarea3'];
-          } else{ ?> Edit  <?php }?>
-          </textarea>
-    </div>
+        <?php
+          $max_posts = 3;
+          for ($i = 1; $i <= $max_posts; $i++) {
+            $portalDate = 'l2date' . $i;
+            $portalName = 'l2name' . $i;
+            $portalLink = 'l2link' . $i;
+        ?>
 
-    <div class="col-1-3">
-      <h4>Block #4</h4>
-      <label for="portal_block[title4]">Title - H2</label>
+        <label for="portal_block[<?php echo $portalName; ?>]">DOCUMENT NAME </label>
+        <br/>
+        <input type="text" name="portal_block[<?php echo $portalName; ?>]" id="portal_block[<?php echo $portalName; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2name' . $i];
+        } ?>" placeholder="Edit">
+
+        <label for="portal_block[<?php echo $portalLink; ?>]">LINK</label>
+        <br/>
+        <input type="text" name="portal_block[<?php echo $portalLink; ?>]" id="portal_block[<?php echo $portalLink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2link' . $i];
+        } ?>" placeholder="Edit">
+        <br/>
+        <br/>
+        <br/>
+      <?php  }?>
+
+<!--FINANCES - BLOCK 2 :: B-->
+
+      <h3><label for="portal_block[level2b]">YEAR 2</label></h3>
+        <br/>
+
+        <label for="portal_block[l2date2]">DATE </label>
+        <input type="text" name="portal_block[l2date2]" id="portal_block[l2date2]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2date2'];
+        } ?>" placeholder="Edit">
+        <br/>
+        <br/>
+
+        <?php
+          $max_posts = 6;
+          for ($i = 4; $i <= $max_posts; $i++) {
+            $portalDate = 'l2date' . $i;
+            $portalName = 'l2name' . $i;
+            $portalLink = 'l2link' . $i;
+        ?>
+
+        <label for="portal_block[<?php echo $portalName; ?>]">DOCUMENT NAME </label>
+        <br/>
+        <input type="text" name="portal_block[<?php echo $portalName; ?>]" id="portal_block[<?php echo $portalName; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2name' . $i];
+        } ?>" placeholder="Edit">
+
+        <label for="portal_block[<?php echo $portalLink; ?>]">LINK</label>
+        <br/>
+        <input type="text" name="portal_block[<?php echo $portalLink; ?>]" id="portal_block[<?php echo $portalLink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2link' . $i];
+        } ?>" placeholder="Edit">
+        <br/>
+        <br/>
+        <br/>
+      <?php  }?>
+
+      <!--FINANCES - BLOCK 3 :: C-->
+
+      <h3><label for="portal_block[level2c]">YEAR 3</label></h3>
+        <br/>
+
+        <label for="portal_block[l2date3]">DATE </label>
+        <input type="text" name="portal_block[l2date3]" id="portal_block[l2date3]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2date3'];
+        } ?>" placeholder="Edit">
+        <br/>
+        <br/>
+
+        <?php
+          $max_posts = 9;
+          for ($i = 7; $i <= $max_posts; $i++) {
+            $portalDate = 'l2date' . $i;
+            $portalName = 'l2name' . $i;
+            $portalLink = 'l2link' . $i;
+        ?>
+
+        <label for="portal_block[<?php echo $portalName; ?>]">DOCUMENT NAME </label>
+        <br/>
+        <input type="text" name="portal_block[<?php echo $portalName; ?>]" id="portal_block[<?php echo $portalName; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2name' . $i];
+        } ?>" placeholder="Edit">
+
+        <label for="portal_block[<?php echo $portalLink; ?>]">LINK</label>
+        <br/>
+        <input type="text" name="portal_block[<?php echo $portalLink; ?>]" id="portal_block[<?php echo $portalLink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+            echo $portal_block['l2link' . $i];
+        } ?>" placeholder="Edit">
+        <br/>
+        <br/>
+        <br/>
+      <?php  }?>
+</div>
+
+  <!--ASSEMBLES GENERALES - BLOCK 1 :: A-->
+  <div class="col-1-3">
+    <h1>Assembles generales</h1>
       <br/>
-      <input type="text" name="portal_block[title4]" id="portal_block[title4]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['title4'];
+      <input type="text" name="portal_block[level3a]" id="portal_block[level3a]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['level3a'];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
-      <label for="portal_block[icon4]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
-      <br/>
-      <input type="text" name="portal_block[icon4]" id="portal_block[icon4]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['icon4'];
+
+      <h3><label for="portal_block[level3a]">YEAR 1</label></h3>
+
+      <label for="portal_block[l3date1]">DATE </label>
+      <input type="text" name="portal_block[l3date1]" id="portal_block[l3date1]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3date1'];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
 
-      <label for="portal_block[textarea4]">Text Content</label>
+      <?php
+        $max_posts = 2;
+        for ($i = 1; $i <= $max_posts; $i++) {
+          $portalName = 'l3name' . $i;
+          $portalLink = 'l3link' . $i;
+      ?>
+      <label for="portal_block[<?php echo $portalName; ?>]">DOCUMENT NAME </label>
       <br/>
+      <input type="text" name="portal_block[<?php echo $portalName; ?>]" id="portal_block[<?php echo $portalName; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3name' . $i];
+      } ?>" placeholder="Edit">
 
-        <textarea type="textarea" name="portal_block[textarea4]" id="portal_block[textarea4]" class="textarea-admin" >
-        <?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['textarea4'];
-        } else{ ?> Edit  <?php }?>
-        </textarea>
-    </div>
-
-    <div class="col-1-3">
-      <h4>Block #5</h4>
-      <label for="portal_block[title5]">Title - H2</label>
+      <label for="portal_block[<?php echo $portalLink; ?>]">LINK</label>
       <br/>
-      <input type="text" name="portal_block[title5]" id="portal_block[title5]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['title5'];
+      <input type="text" name="portal_block[<?php echo $portalLink; ?>]" id="portal_block[<?php echo $portalLink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3link' . $i];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
-      <label for="portal_block[icon5]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
       <br/>
-      <input type="text" name="portal_block[icon5]" id="portal_block[icon5]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['icon5'];
-      } ?>" placeholder="Edit">
-      <br/>
+    <?php  }?>
+
+  <!--ASSEMBLES GENERALES - BLOCK 2 :: B-->
+
+    <h3><label for="portal_block[level3b]">YEAR 2</label></h3>
       <br/>
 
-      <label for="portal_block[textarea5]">Text Content</label>
-      <br/>
-
-        <textarea type="textarea" name="portal_block[textarea5]" id="portal_block[textarea5]" class="textarea-admin" >
-        <?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['textarea5'];
-        } else{ ?> Edit  <?php }?>
-        </textarea>
-    </div>
-
-        <div class="col-1-3">
-      <h4>Block #6</h4>
-      <label for="portal_block[title6]">Title - H2</label>
-      <br/>
-      <input type="text" name="portal_block[title6]" id="portal_block[title6]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['title6'];
-      } ?>" placeholder="Edit">
-      <br/>
-      <br/>
-      <label for="portal_block[icon6]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
-      <br/>
-      <input type="text" name="portal_block[icon6]" id="portal_block[icon6]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['icon6'];
+      <label for="portal_block[l3date2]">DATE </label>
+      <input type="text" name="portal_block[l3date2]" id="portal_block[l3date2]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3date2'];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
 
-      <label for="portal_block[textarea6]">Text Content</label>
-      <br/>
+      <?php
+        $max_posts = 4;
+        for ($i = 3; $i <= $max_posts; $i++) {
+          $portalName = 'l3name' . $i;
+          $portalLink = 'l3link' . $i;
+      ?>
 
-        <textarea type="textarea" name="portal_block[textarea6]" id="portal_block[textarea6]" class="textarea-admin" >
-        <?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['textarea6'];
-        } else{ ?> Edit  <?php }?>
-        </textarea>
-    </div>
-
-        <div class="col-1-3">
-      <h4>Block #7</h4>
-      <label for="portal_block[title7]">Title - H2</label>
+      <label for="portal_block[<?php echo $portalName; ?>]">DOCUMENT NAME </label>
       <br/>
-      <input type="text" name="portal_block[title7]" id="portal_block[title7]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['title7'];
+      <input type="text" name="portal_block[<?php echo $portalName; ?>]" id="portal_block[<?php echo $portalName; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3name' . $i];
+      } ?>" placeholder="Edit">
+
+      <label for="portal_block[<?php echo $portalLink; ?>]">LINK</label>
+      <br/>
+      <input type="text" name="portal_block[<?php echo $portalLink; ?>]" id="portal_block[<?php echo $portalLink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3link' . $i];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
-      <label for="portal_block[icon7]">Icon class from FontAwesome Library - <a href="http://fontawesome.io/cheatsheet/" target="_blank">View cheatsheet</a></label>
       <br/>
-      <input type="text" name="portal_block[icon7]" id="portal_block[icon7]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['icon7'];
+    <?php  }?>
+
+  <!--ASSEMBLES GENERALES - BLOCK 3 :: C-->
+
+    <h3><label for="portal_block[level3c]">YEAR 3</label></h3>
+      <br/>
+
+      <label for="portal_block[l3date3]">DATE </label>
+      <input type="text" name="portal_block[l3date3]" id="portal_block[l3date3]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3date3'];
       } ?>" placeholder="Edit">
       <br/>
       <br/>
 
-      <label for="portal_block[textarea7]">Text Content</label>
-      <br/>
+      <?php
+        $max_posts = 6;
+        for ($i = 5; $i <= $max_posts; $i++) {
+          $portalName = 'l3name' . $i;
+          $portalLink = 'l3link' . $i;
+      ?>
 
-        <textarea type="textarea" name="portal_block[textarea7]" id="portal_block[textarea7]" class="textarea-admin" >
-        <?php if ( ! empty( $portal_block ) ) {
-          echo $portal_block['textarea7'];
-        } else{ ?> Edit  <?php }?>
-        </textarea>
+      <label for="portal_block[<?php echo $portalName; ?>]">DOCUMENT NAME </label>
+      <br/>
+      <input type="text" name="portal_block[<?php echo $portalName; ?>]" id="portal_block[<?php echo $portalName; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3name' . $i];
+      } ?>" placeholder="Edit">
+
+      <label for="portal_block[<?php echo $portalLink; ?>]">LINK</label>
+      <br/>
+      <input type="text" name="portal_block[<?php echo $portalLink; ?>]" id="portal_block[<?php echo $portalLink; ?>]" class="input-admin" value="<?php if ( ! empty( $portal_block ) ) {
+          echo $portal_block['l3link' . $i];
+      } ?>" placeholder="Edit">
+      <br/>
+      <br/>
+      <br/>
+    <?php  }?>
     </div>
 
   <?php } ?>
