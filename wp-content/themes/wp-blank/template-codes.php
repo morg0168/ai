@@ -17,11 +17,27 @@
                         <header class="c-home_header" data-center="@myAttr:-in-view box">
                             <div class="js-parallax">
                                 <div class="-overflow-hidden">
-                                    <h1><a href="<?php echo home_url(); ?>/code/">Saint Viateur Est</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">343 Ridgewood</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">50 Laurier Est</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">100 Sherbrooke Ouest</a></h1>
-                                    <h1><a href="<?php echo home_url(); ?>/code/">20 Parc Ave</a></h1>
+
+
+                                  <?php
+                                    $product_page_args = array(
+                                    'post_type' => 'page',
+                                    'cat' => 'code',
+                                    'taxonomy' => 'category',
+                                            'term' => 'code'
+                                    );
+                                    $site_url = home_url() . '/';
+                                    query_posts($product_page_args);
+                                      if (have_posts()):
+                                      while ( have_posts() ) : the_post();
+                                      $raw_title = get_the_title();
+                                      $title = str_replace(' ', '-', $raw_title);
+                                    ?>
+                                      <h1><a href="<?php echo $site_url . $title; ?>"><?php the_title(); ?></a></h1>
+                                  <?php endwhile; endif;
+                                  wp_reset_query();?>
+
+
                                 </div>
                             </div>
                         </header>

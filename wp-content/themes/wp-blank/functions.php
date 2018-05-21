@@ -602,6 +602,12 @@ function tags_categories_support_query($wp_query) {
 add_action('init', 'tags_categories_support_all');
 add_action('pre_get_posts', 'tags_categories_support_query');
 
+add_filter( 'private_title_format', 'myprefix_private_title_format' );
+add_filter( 'protected_title_format', 'myprefix_private_title_format' );
+
+function myprefix_private_title_format( $format ) {
+    return '%s';
+}
 
 ?>
 <?php
