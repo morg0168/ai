@@ -586,6 +586,23 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+// add tag and category support to pages
+function tags_categories_support_all() {
+  register_taxonomy_for_object_type('post_tag', 'page');
+  register_taxonomy_for_object_type('category', 'page');
+}
+
+// ensure all tags and categories are included in queries
+function tags_categories_support_query($wp_query) {
+  if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');
+  if ($wp_query->get('category_name')) $wp_query->set('post_type', 'any');
+}
+
+// tag and category hooks
+add_action('init', 'tags_categories_support_all');
+add_action('pre_get_posts', 'tags_categories_support_query');
+
+
 ?>
 <?php
 
