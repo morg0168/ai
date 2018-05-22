@@ -40,7 +40,7 @@
                                                     $portalValueLength = strlen(trim($portalValue));
                                                   if ($portalValueLength > 0) {
                                                   ?>
-                                              <li class="codes-list-item"><a href="javascript:void(0)"
+                                              <li class="codes-list-item"><a href="javascript:void(0)" target="_blank"
                                                 data-download="<?php if ($portal_block['l1link' . $i]) { echo $portal_block['l1link' . $i]; } ?>"
                                                 data-target="<?php if ($portal_block['l1link' . $i]) { echo $portal_block['l1link' . $i]; } ?>">
                                                 <?php if ($portal_block['l1name' . $i]) { echo $portal_block['l1name' . $i]; } ?></a>
@@ -62,7 +62,7 @@
                                                       if ($dateSet > 0 && $portalName > 0) {
                                                     ?>
                                                     <li class="codes-list-item end">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="javascript:void(0)" target="_blank"
                                                       data-download="<?php if ($portal_block['l2link' . $i]) { echo $portal_block['l2link' . $i]; } ?>"
                                                       data-target="<?php if ($portal_block['l2link' . $i]) { echo $portal_block['l2link' . $i]; } ?>">
                                                       <?php if ($portal_block['l2name' . $i]) { echo $portal_block['l2name' . $i]; } ?></a>
@@ -81,7 +81,7 @@
                                                       if ($dateSet > 0 && $portalName > 0) {
                                                     ?>
                                                     <li class="codes-list-item end">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="javascript:void(0)" target="_blank"
                                                       data-download="<?php if ($portal_block['l2link' . $i]) { echo $portal_block['l2link' . $i]; } ?>"
                                                       data-target="<?php if ($portal_block['l2link' . $i]) { echo $portal_block['l2link' . $i]; } ?>">
                                                       <?php if ($portal_block['l2name' . $i]) { echo $portal_block['l2name' . $i]; } ?></a>
@@ -99,7 +99,7 @@
                                                         if ($dateSet > 0 && $portalName > 0) {
                                                     ?>
                                                     <li class="codes-list-item end">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="javascript:void(0)" target="_blank"
                                                       data-download="<?php if ($portal_block['l2link' . $i]) { echo $portal_block['l2link' . $i]; } ?>"
                                                       data-target="<?php if ($portal_block['l2link' . $i]) { echo $portal_block['l2link' . $i]; } ?>">
                                                       <?php if ($portal_block['l2name' . $i]) { echo $portal_block['l2name' . $i]; } ?></a>
@@ -123,7 +123,7 @@
                                                       if ($dateSet > 0 && $portalName > 0) {
                                                     ?>
                                                     <li class="codes-list-item end">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="javascript:void(0)" target="_blank"
                                                       data-download="<?php if ($portal_block['l3link' . $i]) { echo $portal_block['l3link' . $i]; } ?>"
                                                       data-target="<?php if ($portal_block['l3link' . $i]) { echo $portal_block['l3link' . $i]; } ?>">
                                                       <?php if ($portal_block['l3name' . $i]) { echo $portal_block['l3name' . $i]; } ?></a>
@@ -142,7 +142,7 @@
                                                       if ($dateSet > 0 && $portalName > 0) {
                                                     ?>
                                                     <li class="codes-list-item end">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="javascript:void(0)" target="_blank"
                                                       data-download="<?php if ($portal_block['l3link' . $i]) { echo $portal_block['l3link' . $i]; } ?>"
                                                       data-target="<?php if ($portal_block['l3link' . $i]) { echo $portal_block['l3link' . $i]; } ?>">
                                                       <?php if ($portal_block['l3name' . $i]) { echo $portal_block['l3name' . $i]; } ?></a>
@@ -160,42 +160,13 @@
                                                         if ($dateSet > 0 && $portalName > 0) {
                                                     ?>
                                                     <li class="codes-list-item end">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="javascript:void(0)" target="_blank"
                                                       data-download="<?php if ($portal_block['l3link' . $i]) { echo $portal_block['l3link' . $i]; } ?>"
                                                       data-target="<?php if ($portal_block['l3link' . $i]) { echo $portal_block['l3link' . $i]; } ?>">
                                                       <?php if ($portal_block['l3name' . $i]) { echo $portal_block['l3name' . $i]; } ?></a>
                                                     </li>
                                                     <?php }
                                                 }?>
-
-                                                <!-- <li class="codes-list-item">2018
-                                                    <ul class="codes-list -nested level3">
-                                                        <li class="codes-list-item end">
-                                                            <a href=""> Ordre du jour</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="codes-list-item">2017
-                                                    <ul class="codes-list -nested level3">
-                                                        <li class="codes-list-item end">
-                                                            <a href="">Ordre du jour</a>
-                                                        </li>
-                                                        <li class="codes-list-item end">
-                                                            <a href="">Procès-verbal</a>
-                                                        </li>
-
-                                                    </ul>
-                                                </li>
-                                                <li class="codes-list-item">2016
-                                                    <ul class="codes-list -nested level3">
-                                                        <li class="codes-list-item end">
-                                                            <a href="">Ordre du jour</a>
-                                                        </li>
-                                                        <li class="codes-list-item end">
-                                                            <a href=""> Procès-verbal</a>
-                                                        </li>
-                                                    </ul>
-                                                </li> -->
                                             </ul>
                                         </li>
                                     </ul>

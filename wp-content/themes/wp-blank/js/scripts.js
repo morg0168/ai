@@ -77,17 +77,24 @@ jQuery(document).ready(function ($) {
 	            currentPdf.html('');
 	            var dataTarget = $(this).find('a').attr('data-target');
 	            currentPdf.append('<img src="' + dataTarget + '" />');
-	            console.log(dataTarget);
+	            //console.log(dataTarget);
 	            $('.pdf-wrap .img-contain').fadeIn();
-	        });
-	        //download pdf
-	        $('.codes-list-item a').click(function () {
-	            var dataFile = $(this).attr('data-file');
-	            // // hope the server sets Content-Disposition: attachment!
-	            window.location = dataFile;
 	        });
 				}
     }
+
+		//download pdf, JPEG + PDF need to be uploaded on same date!
+		$('.codes-list-item a').click(function () {
+
+				var rawDataFile = $(this).attr('data-target');
+
+				var pos = rawDataFile.lastIndexOf(".");
+				dataFile = rawDataFile.substr(0, pos < 0 ? rawDataFile.length : pos) + ".pdf";
+				
+				console.log(dataFile);
+				// // hope the server sets Content-Disposition: attachment!
+				$(this).attr("href", dataFile);
+		});
 
 		//stop page reload if on current page
 		var links = document.querySelectorAll('a[href]');
