@@ -1384,6 +1384,44 @@ footer {
       background-image: url('./img/sky.png');
     }
   }
+  .post-password-form {
+    min-height: 90vh;
+    text-align: center;
+    padding-top: 40vh;
+    p {
+      &:first-of-type {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    label {
+      font-size: 1rem;
+    }
+    input[name="post_password"] {
+      border: none;
+      border-bottom: 1px solid grey;
+      background: transparent;
+      padding: 1rem 1rem;
+      margin-bottom: 2em;
+    }
+    input[name="Submit"] {
+      width:300px;
+      text-align: center;
+      margin:0 auto;
+      display:block;
+      -webkit-appearance: none;
+      border: none;
+      font-size: 2rem;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  .codes-building_name {
+    a {
+      color:black;
+      padding:0.5rem;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1391,6 +1429,10 @@ footer {
     position: relative;
     padding-left: 8rem;
   }
+    .post-password-form {
+      max-width:50%;
+      margin: 0 auto;
+    }
 }
 
 /** missions page**/
@@ -1595,6 +1637,3 @@ footer {
     right: 5%;
   }
 }
-
-
-

@@ -33,7 +33,7 @@
                                       $raw_title = get_the_title();
                                       $title = str_replace(' ', '-', $raw_title);
                                     ?>
-                                      <h1><a href="<?php echo $site_url . $title; ?>"><?php the_title(); ?></a></h1>
+                                      <h1 class="codes-building_name"><a href="<?php echo $site_url . $title; ?>"><?php the_title(); ?></a></h1>
                                   <?php endwhile; endif;
                                   wp_reset_query();?>
 
