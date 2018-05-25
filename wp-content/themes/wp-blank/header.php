@@ -81,7 +81,18 @@
 		                            <li class="c-nav_main_item -second"><a href="<?php echo home_url(); ?>/organisation/" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
 		                            <li class="c-nav_main_item -third"><a href="<?php echo home_url(); ?>/codes/" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
 		                        </ul>
-		                        <div class="c-main_right"> <a href="" class="c-main_right_laguage c-nav_main_link -small "><span class="c-main_right_language_text">FR</span></a>
+		                        <div class="c-main_right"> <a href="" class="c-main_right_laguage c-nav_main_link -small "><span class="c-main_right_language_text">
+
+													<?php
+													$args = array('hide_current' => true,
+													'display_names_as' => 'slug'
+													);
+													if (function_exists('pll_the_languages')) {
+														pll_the_languages($args);
+													}
+													?>
+
+													</span></a>
 		                            <div class="c-main_right_contact"><a href="javascript:void(0)" class="c-main_contact_button o-button fill" id=" contact-us">Contact<span class="button_line"></span><span class="button_line"></span></a></div>
 		                        </div>
 		                    </div>

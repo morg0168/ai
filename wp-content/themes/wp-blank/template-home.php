@@ -1,8 +1,8 @@
 <?php /* Template Name: Home */ //get_header(); ?>
-<?php 
+<?php
   if(!isset($_COOKIE['first'])) {
     setcookie('first', 'yes', time() + 3600);
-    get_header('first'); 
+    get_header('first');
   } else {
     get_header();
   }
@@ -32,7 +32,7 @@
                                         </div>
                                     </div>
                                 </h1> </div>
-                                <p class="c-home_header_subtitle ">Gestion de condominium</p>
+                                <p class="c-home_header_subtitle "><?php echo pll__('subtitle'); ?></p>
                             </header>
                             <div class="c-header_img_contain">
                                 <div class="c-header_img_bg"> </div>

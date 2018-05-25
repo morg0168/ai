@@ -82,9 +82,10 @@ body {
     font-size: 3.5rem;
     text-decoration: underline;
     color: white;
-    .french, .english {
+    .language-switcher a {
       cursor: pointer;
       text-align: center;
+      color:white;
     }
   }
 }

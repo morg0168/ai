@@ -21,14 +21,14 @@ jQuery(document).ready(function ($) {
 						scrollTop: 0
 				}, 'slow');
 		});
-		//language switcher
-		// $('.french, .english').click(function () {
-		//     $('.c-loader_contain').remove();
+		 $('.current-lang a').click(function () {
+	     	$('.c-loader_contain').remove();
 				$('body').removeClass('-modal-open');
-		//     languageChosen();
-		//     skrollrStart();
-		//     onscreenStart();
-		// });
+		     languageChosen();
+				 //	todo: 	Delay Skrollr init
+		     skrollrStart();
+		     onscreenStart();
+		 });
 		$('#js-toggle_menu, .c-nav_main_list li a').click(function () {
 				toggleNav();
 		});
@@ -90,7 +90,7 @@ jQuery(document).ready(function ($) {
 
 				var pos = rawDataFile.lastIndexOf(".");
 				dataFile = rawDataFile.substr(0, pos < 0 ? rawDataFile.length : pos) + ".pdf";
-				
+
 				console.log(dataFile);
 				// // hope the server sets Content-Disposition: attachment!
 				$(this).attr("href", dataFile);
