@@ -2,10 +2,10 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
+		<section class="row middle-xs center-xs">
 
 			<!-- article -->
-			<article id="post-404">
+			<article id="post-404" class="col-xs-12 404">
 
 				<h1><?php _e( 'Page not found', 'wpblank' ); ?></h1>
 				<h2>
@@ -19,6 +19,6 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>
