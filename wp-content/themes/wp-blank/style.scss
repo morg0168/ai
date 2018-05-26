@@ -108,9 +108,16 @@ img {
 
 a {
   text-decoration: none;
+  color:black;
   span:hover, &:hover {
     cursor: pointer;
   }
+}
+
+.404 {
+    a {
+      color:black;
+    }
 }
 
 .-left {

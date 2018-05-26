@@ -3,16 +3,23 @@
 		        <div class="c-footer_contain">
 		            <div class="c-footer_inner row middle-xs center-xs">
 		                <div class="col col-xs-6 col-sm-3 logo u-demi-text"> <span class="box -text-left">
-		                        AMAIMMO<br>12 Laurier, Montreal<br>438.883.2055<br>M - F : 9am - 5pm <br> S - S : 12am - 3pm
+		                        AMAIMMO<br>12 Laurier, Montreal<br>1.514.296.3005<br>M - F : 9am - 5pm <br> S - S : 12am - 3pm
 		                    </span> </div>
 		                <div class="col col-xs-6 col-sm-3 u-demi-text">
-		                	<span class="-text-left box">Pages</span> <span class="-text-left box">Info</span> <span class="-text-left box"><a href="#">Acceuil</a></span> <span class="-text-left box"><a href="#">FAQ</a></span>
+		                	<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>">Mission</a></span>
+											<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>">Organization</a></span>
+											<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>">Codes</a></span>
 		                </div>
-		                <div class="col col-xs-6 col-sm-3 u-demi-text">
-		                	<span class="-text-left box"><a href="mission.html">Mission</a></span> <span class="-text-left box"><a href="#">Privacy Policy</a></span> <span class="-text-left box"><a href="codes.html">Codes</a></span> <span class="-text-left box"><a href="#">English</a></span>
-		                </div>
-		                <div class="col col-xs-6 col-sm-3 logo u-demi-text"> 
-		                	<span class="-text-left box"><a href="organization.html">Organization</a></span> <span class="-text-left box"><a href="#">Contact</a></span>
+		                <div class="col col-xs-6 col-sm-3 logo u-demi-text">
+											<span class="-text-left box">
+												<?php
+													$args = array('hide_current' => true);
+													if (function_exists('pll_the_languages')) {
+														pll_the_languages($args);
+													}
+												?></span>
+												<span class="-text-left box"><a href="javascript:void(0)" class="footer-contact">Contact</a></span>
+												<span class="-text-left box"><a href="mailto:amaimmo@hotmail.com">Amaimmo@hotmail.com</a></span>
 		                </div>
 		            </div>
 		            <script>

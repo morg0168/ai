@@ -48,7 +48,7 @@ jQuery(document).ready(function ($) {
 				}
 			}
 		//open contact modal
-		$('.c-main_right_contact').click(function () {
+		$('.c-main_right_contact, .footer-contact').click(function () {
 				if ($(this).hasClass('active')) {
 						$(this).removeClass('active');
 				}

@@ -54,7 +54,7 @@
                             <div class="c-home_block c-half_block -right -first col-xs-6">
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
-                                        <p class="c-block_text_title_pre">Notre</p>
+                                        <p class="c-block_text_title_pre"><?php echo pll__('notre'); ?></p>
                                         <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Mission </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Service a la clientèle</li>
@@ -63,7 +63,7 @@
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Comptable</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Aide-comptable</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size"> Secrétaire de gestion </li>
-                                        </ul> <a href="" class="o-button c-block_read_more c-main_contact_button fill" data-start="@class: c-block_read_more c-main_contact_button o-button; transform: translate(-150px, -50px) rotate(0deg)" data-100-start="@class:c-block_read_more c-main_contact_button -loaded o-button fill;" data-100-center="transform: translate(0px, 0px) rotate(0deg)">Read more<span class="button_line"></span><span class="button_line"></span></a> </div>
+                                        </ul> <a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>" class="o-button c-block_read_more c-main_contact_button fill" data-start="@class: c-block_read_more c-main_contact_button o-button; transform: translate(-150px, -50px) rotate(0deg)" data-100-start="@class:c-block_read_more c-main_contact_button -loaded o-button fill;" data-100-center="transform: translate(0px, 0px) rotate(0deg)"><?php echo pll__('read_more'); ?><span class="button_line"></span><span class="button_line"></span></a> </div>
                                     <a href=" " class="c-block_link "></a>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                             <div class="c-home_block c-half_block -right -first col-xs-6">
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
-                                        <p class="c-block_text_title_pre">Notre</p>
+                                        <p class="c-block_text_title_pre"><?php echo pll__('notre'); ?></p>
                                         <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Organization </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Service a la clientèle</li>
@@ -96,7 +96,7 @@
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Comptable</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Aide-comptable</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size"> Secrétaire de gestion </li>
-                                        </ul> <a href="" class="o-button c-block_read_more c-main_contact_button fill" data-start="@class: c-block_read_more c-main_contact_button o-button; transform: translate(-150px, -50px) rotate(0deg)" data-100-start="@class:c-block_read_more c-main_contact_button -loaded o-button fill;" data-100-center="transform: translate(0px, 0px) rotate(0deg)">Read more<span class="button_line"></span><span class="button_line"></span></a> </div>
+                                        </ul> <a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>" class="o-button c-block_read_more c-main_contact_button fill" data-start="@class: c-block_read_more c-main_contact_button o-button; transform: translate(-150px, -50px) rotate(0deg)" data-100-start="@class:c-block_read_more c-main_contact_button -loaded o-button fill;" data-100-center="transform: translate(0px, 0px) rotate(0deg)"><?php echo pll__('read_more'); ?><span class="button_line"></span><span class="button_line"></span></a> </div>
                                     <a href=" " class="c-block_link "></a>
                                 </div>
                             </div>
@@ -120,8 +120,8 @@
                             <div class="c-home_block c-half_block -right -first col-xs-6">
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
-                                        <p class="c-block_text_title_pre">Notre</p>
-                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> codes </h1>
+                                        <p class="c-block_text_title_pre"><?php echo pll__('notre'); ?></p>
+                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Codes </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Service a la clientèle</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Gestionnaire d’immeubles</li>
@@ -129,7 +129,7 @@
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Comptable</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size">Aide-comptable</li>
                                             <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size"> Secrétaire de gestion </li>
-                                        </ul> <a href="" class="o-button c-block_read_more c-main_contact_button fill" data-start="@class: c-block_read_more c-main_contact_button o-button; transform: translate(-150px, -50px) rotate(0deg)" data-100-start="@class:c-block_read_more c-main_contact_button -loaded o-button fill;" data-100-center="transform: translate(0px, 0px) rotate(0deg)">Read more<span class="button_line"></span><span class="button_line"></span></a> </div>
+                                        </ul> <a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage'] ?>" class="o-button c-block_read_more c-main_contact_button fill" data-start="@class: c-block_read_more c-main_contact_button o-button; transform: translate(-150px, -50px) rotate(0deg)" data-100-start="@class:c-block_read_more c-main_contact_button -loaded o-button fill;" data-100-center="transform: translate(0px, 0px) rotate(0deg)"><?php echo pll__('read_more'); ?><span class="button_line"></span><span class="button_line"></span></a> </div>
                                     <a href=" " class="c-block_link "></a>
                                 </div>
                             </div>
