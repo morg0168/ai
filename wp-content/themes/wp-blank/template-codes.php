@@ -17,14 +17,19 @@
                         <header class="c-home_header" data-center="@myAttr:-in-view box">
                             <div class="js-parallax">
                                 <div class="-overflow-hidden">
-
-
                                   <?php
+                                  $currentLang = pll_current_language();
+                                  if($currentLang == 'en') {
+                                    $tag = 'code-en';
+                                    $suffix = '-en';
+                                  } else {
+                                    //Actually written 'code' in CMS tag section
+                                    $tag = 'code-fr';
+                                    $suffix = '-fr';
+                                  }
                                     $product_page_args = array(
                                     'post_type' => 'page',
-                                    'cat' => 'code',
-                                    'taxonomy' => 'category',
-                                            'term' => 'code'
+                                    'tag' => $tag
                                     );
                                     $site_url = home_url() . '/';
                                     query_posts($product_page_args);
@@ -33,7 +38,7 @@
                                       $raw_title = get_the_title();
                                       $title = str_replace(' ', '-', $raw_title);
                                     ?>
-                                      <h1 class="codes-building_name"><a href="<?php echo $site_url . $title; ?>"><?php the_title(); ?></a></h1>
+                                      <h1 class="codes-building_name"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
                                   <?php endwhile; endif;
                                   wp_reset_query();?>
 
