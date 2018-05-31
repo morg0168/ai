@@ -1,12 +1,5 @@
-<?php /* Template Name: Home */ //get_header(); ?>
-<?php
-  if(!isset($_COOKIE['first'])) {
-    setcookie('first', 'yes', time() + 3600);
-    get_header('first');
-  } else {
-    get_header();
-  }
-?>
+<?php /* Template Name: Home */ get_header(); ?>
+
 
     </div>
     <main id="barba-wrapper">
