@@ -84,6 +84,15 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		                            <li class="c-nav_main_item -first"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
 		                            <li class="c-nav_main_item -second"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
 		                            <li class="c-nav_main_item -third"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
+                                <li class="c-nav_main_item mobile-links"><a href="javascript:void(0)" class="c-nav_main_link ajaxlink contact"><span class="c-nav_main_text">Contact</span></a></li>
+                              	<span class="language-wrap"><?php
+          													$args = array('hide_current' => true,
+          													'display_names_as' => 'slug'
+          													);
+          													if (function_exists('pll_the_languages')) {
+          														pll_the_languages($args);
+          													}
+          										?></span>
 		                        </ul>
 		                        <div class="c-main_right row middle-xs"> <a href="" class="c-main_right_laguage c-nav_main_link -small "><span class="c-main_right_language_text">
 
@@ -113,9 +122,9 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 
 		    <nav class="c-header_secondary -desktop">
 		        <ul>
-		            <li><a href="https://www.facebook.com/amaimmo/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-		            <li><a href="https://www.instagram.com/ama_immo/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-		            <li><a href="https://twitter.com/amaimmo" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		            <li><a href="https://www.facebook.com/amaimmo/" target="_blank"><i class="fa fa-15x fa-facebook" aria-hidden="true"></i></a></li>
+		            <li><a href="https://www.instagram.com/ama_immo/" target="_blank"><i class="fa fa-15x fa-instagram"></i></a></li>
+		            <li><a href="https://twitter.com/amaimmo" target="_blank"><i class="fa fa-15x fa-twitter"></i></a></li>
 		        </ul>
 		    </nav>
 

@@ -2,15 +2,15 @@
 		        <div id="map"></div>
 		        <div class="c-footer_contain">
 		            <div class="c-footer_inner row middle-xs center-xs">
-		                <div class="col col-xs-6 col-sm-3 logo u-demi-text"> <span class="box -text-left">
+		                <div class="col col-xs-12 col-sm-3 logo u-demi-text"> <span class="box -text-left">
 		                        AMAIMMO<br>12 Laurier, Montreal<br>1.514.296.3005<br>M - F : 9am - 5pm <br> S - S : 12am - 3pm
 		                    </span> </div>
-		                <div class="col col-xs-6 col-sm-3 u-demi-text">
+		                <div class="col col-xs-12 col-sm-3 u-demi-text">
 		                	<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>">Mission</a></span>
 											<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>">Organization</a></span>
 											<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>">Codes</a></span>
 		                </div>
-		                <div class="col col-xs-6 col-sm-3 logo u-demi-text">
+		                <div class="col col-xs-12 col-sm-3 logo u-demi-text">
 											<span class="-text-left box">
 												<?php
 													$args = array('hide_current' => true);

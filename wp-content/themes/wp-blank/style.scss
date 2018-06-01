@@ -511,8 +511,6 @@ html {
         content: "";
         -webkit-transform: translate(-50%, 0) rotate(0deg);
         transform: translate(-50%, 0) rotate(0deg);
-        -webkit-transition: all .3s ease;
-        transition: all .3s ease;
       }
       span {
         display: block;
@@ -522,8 +520,6 @@ html {
         background-color: currentColor;
         border-radius: 2px;
         opacity: 1;
-        -webkit-transition: all .3s ease;
-        transition: all .3s ease;
       }
       &.menu_is_loaded {
         color: white;
@@ -532,9 +528,6 @@ html {
           top: 64%;
           -webkit-transform: translate(-50%, 0) rotate(-38deg);
           transform: translate(-50%, 0) rotate(-45deg);
-          -webkit-transition: -webkit-transform 0.3s ease;
-          transition: transform .3s ease;
-          transition: transform 0.3s ease, -webkit-transform 0.3s ease;
         }
         span {
           opacity: 0;
@@ -544,9 +537,6 @@ html {
         &::after {
           -webkit-transform: translate(-50%, 0) rotate(-38deg);
           transform: translate(-50%, 0) rotate(45deg);
-          -webkit-transition: -webkit-transform 0.3s ease;
-          transition: transform .3s ease;
-          transition: transform 0.3s ease, -webkit-transform 0.3s ease;
         }
       }
     }
@@ -579,7 +569,7 @@ html {
               display: inline-block;
               letter-spacing: .1em;
               text-decoration: none;
-              padding: 0 3.25rem;
+              padding: 0 1.25rem;
               font-weight: 700;
               font-size: 1.125rem;
             }
@@ -744,6 +734,19 @@ html {
     -webkit-transition: all 0.7s ease-out;
     transition: all 0.7s ease-out;
   }
+
+  .mobile-links, .language-wrap {
+    display:block;
+    color:white;
+  }
+  .language-wrap {
+    padding: 1rem 2.5rem;
+  }
+
+  .c-main_right_contact {
+    display:none!important;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -765,6 +768,10 @@ html {
     height: 100%;
     overflow: visible;
     z-index:9;
+  }
+
+  .language-wrap, .mobile-links {
+    display:none!important;
   }
 }
 
@@ -811,6 +818,7 @@ html {
     padding: 1rem 2.5rem;
     font-size: 2.5rem;
     line-height: 1;
+    width:100%;
     opacity: 1 !important;
     -webkit-transform: matrix(1, 0, 0, 1, 0, 0) !important;
     transform: matrix(1, 0, 0, 1, 0, 0) !important;
@@ -842,7 +850,7 @@ html {
 .c-header_secondary {
   position: fixed;
   top: 50%;
-  right: 1.5rem;
+  right: 0.8rem;
 }
 
 .c-header_tertiary {
@@ -854,7 +862,7 @@ html {
 .c-header_scrolltop {
   position: fixed;
   top: 50%;
-  left: 1.5rem;
+  left: 0.8rem;
   -webkit-transform-origin: 0 50%;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
@@ -1038,8 +1046,8 @@ main {
     }
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
-    font-size: 145px;
-    line-height: 145px;
+    font-size: 115px;
+    line-height: 115px;
     transition-delay: 0.2s;
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_subtitle {
@@ -1585,7 +1593,7 @@ footer {
     border: none;
     border-bottom: 1px solid grey;
     background: transparent;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
     width: 100%;
   }
   a {
@@ -1644,13 +1652,40 @@ footer {
     height: auto;
     overflow: scroll;
   }
+  .c-header_tertiary {
+    display:none;
+  }
     .mb-contain {
-    width: 100%;
-    overflow: scroll;
-    padding: 0 10%;
+      width: 100%;
+      min-height: 220vh;
+      overflow: scroll;
+      padding: 0 10%;
+      > div {
+        width: 100%;
+        min-height: 200vh;
+        overflow: scroll;
+        padding: 0 10%;
+        top: 0;
+        margin-bottom: 80vh;
+        margin-top: 100vh;
+        position: relative;
+      }
   }
     .mb-contain .close-button {
     top: 5%;
     right: 5%;
+  }
+}
+
+.fa-15x {
+  font-size:1.3rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .c-header .c-header_wrap .c-header_inner .c-nav .c-nav_wrap ul.c-nav_main_list li a {
+      padding: 0px 3.25rem;
+  }
+  main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
+    font-size:145px;
   }
 }

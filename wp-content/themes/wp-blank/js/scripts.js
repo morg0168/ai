@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
 
+	'use strict';
+
 		skrollrStart();
 		onscreenStart();
 		skrollr.get().refresh();
@@ -35,8 +37,8 @@ jQuery(document).ready(function ($) {
 
 		function toggleNav () {
 			if ($(window).width() < 768) {
-						el = $('#js-nav');
-						button = $('#js-toggle_menu');
+						var el = $('#js-nav');
+						var button = $('#js-toggle_menu');
 						if (!el.hasClass('menu_is_loaded')) {
 								el.addClass('menu_is_loaded');
 								button.addClass('menu_is_loaded');
@@ -48,7 +50,7 @@ jQuery(document).ready(function ($) {
 				}
 			}
 		//open contact modal
-		$('.c-main_right_contact, .footer-contact').click(function () {
+		$('.c-main_right_contact, .footer-contact, .contact').click(function () {
 				if ($(this).hasClass('active')) {
 						$(this).removeClass('active');
 				}
@@ -110,7 +112,7 @@ jQuery(document).ready(function ($) {
 
 		//skrollr start
 		function skrollrStart () {
-        _skrollr = skrollr.get();
+      var  _skrollr = skrollr.get();
         if (_skrollr) {
             _skrollr.refresh();
         }
