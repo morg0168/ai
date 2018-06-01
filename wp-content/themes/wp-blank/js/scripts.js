@@ -124,7 +124,21 @@ jQuery(document).ready(function ($) {
             skrollr.init({
                 forceHeight: false,
 								smoothScrolling: true,
-								mobileDeceleration: 0.004
+								mobileDeceleration: 0.004,
+								constants: {
+									startanchor: function() {
+										var width = screen.width;
+										var startAnchor;
+
+										if (width < 768) {
+											startAnchor = 100;
+										} else {
+											startAnchor = 100;
+										}
+
+										return startAnchor;
+									}
+								}
             });
         }
     }

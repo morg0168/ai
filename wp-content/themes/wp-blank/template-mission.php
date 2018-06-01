@@ -8,7 +8,7 @@
                 <div class="c-home_block c-half_block mission-text col-xs-12 col-sm-6  c-content_wrap o-container -medium ">
                     <div class="c-block_text_wrap">
                         <div class="c-block_text_content -align-center">
-                            <p class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(100px, 0px) rotate(0deg)" data-center="transform: translate(0px, 0px) rotate(0deg)">Plus de vingt années en gestion de condominium </p>
+                            <p class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(100px, 0px) rotate(0deg)" data-_startanchor-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(0px, 0px) rotate(0deg)">Plus de vingt années en gestion de condominium </p>
                             <p class="u-normal-text">Riche d’une expérience de plus de vingt années en gestion de condominium, l’équipe d’AMA IMMO, avec son organisation originale, vous apportera un service de qualité supérieure. Notre service à la clientèle apportera en tout temps aux copropriétaires, les informations et les réponses dont ils auront besoin. L’organisation des relations entre les administrateurs et le gestionnaire se fera selon une approche personnalisée. </p>
                         </div>
                         <a href=" " class="c-block_link "></a>

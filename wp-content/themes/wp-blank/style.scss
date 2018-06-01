@@ -1488,6 +1488,23 @@ footer {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .bc-inner.mission {
+    margin:0 4rem;
+    .section-001 {
+      margin-top:120px;
+    }
+    .c-block_text_title {
+      font-size:2rem;
+    }
+    #section-0011 {
+      .img-contain {
+        display: none;
+      }
+    }
+  }
+}
+
 /** organization page**/
 
 @media only screen and (min-width: 768px) {
