@@ -1,7 +1,7 @@
 <?php /* Template Name: Mission */ get_header(); ?>
 
 <main id="barba-wrapper">
-    <div class="barba-container" data-next="organization.html">
+    <div class="barba-container" data-next="organization.html" id="skrollr-body">
         <div class="bc-inner mission">
             <!-- section 2 -->
             <section class="section-001 row" id="section-001">
@@ -60,7 +60,6 @@
                 <p>Notre équipe de professionnels de l’immobilier, fort d’une expérience de plus de vingt ans, est en mesure de vous fournir un service de qualité supérieure.</p>
             </section>
         </div>
+        <?php get_footer(); ?>
     </div>
 </main>
-
-<?php get_footer(); ?>

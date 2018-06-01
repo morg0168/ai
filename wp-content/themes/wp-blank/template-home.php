@@ -3,7 +3,7 @@
 
     </div>
     <main id="barba-wrapper">
-        <div class="barba-container">
+        <div class="barba-container" id="skrollr-body">
             <div class="bc-inner home">
                 <!-- section 1 -->
                 <section class="section-001 hero o-container" id="section-001">
@@ -130,9 +130,8 @@
                     </div>
                 </section>
             </div>
+          <?php get_footer(); ?>
         </div>
     </main>
 
 <?php // get_sidebar(); ?>
-
-<?php get_footer(); ?>

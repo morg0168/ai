@@ -49,6 +49,10 @@ jQuery(document).ready(function ($) {
 						}
 				}
 			}
+
+			if ($(window).width() < 768) {
+					$('.c-header').removeClass('c-header_static').addClass('c-header_scrolled');
+			}
 		//open contact modal
 		$('.c-main_right_contact, .footer-contact, .contact').click(function () {
 				if ($(this).hasClass('active')) {
@@ -118,7 +122,9 @@ jQuery(document).ready(function ($) {
         }
         else {
             skrollr.init({
-                forceHeight: false
+                forceHeight: false,
+								smoothScrolling: true,
+								mobileDeceleration: 0.004
             });
         }
     }
