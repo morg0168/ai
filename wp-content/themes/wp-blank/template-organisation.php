@@ -1,7 +1,7 @@
 <?php /* Template Name: Organisation */ get_header(); ?>
 
 <main id="barba-wrapper">
-    <div class="barba-container" data-next="codes.html">
+    <div class="barba-container" data-next="codes.html" id="skrollr-body">
         <div class="bc-inner organization">
             <!-- section 2 -->
             <section class="section-001 row middle-xs center-xs" id="section-001">
@@ -96,7 +96,6 @@
                     </div>
                 </div>
             </section>
+            <?php get_footer(); ?>
         </div>
 </main>
-
-<?php get_footer(); ?>

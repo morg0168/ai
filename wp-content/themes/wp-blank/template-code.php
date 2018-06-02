@@ -1,7 +1,7 @@
 <?php /* Template Name: Code */ get_header(); ?>
 
 <main id="barba-wrapper">
-    <div class="barba-container" data-next="index.html">
+    <div class="barba-container" data-next="index.html"  id="skrollr-body">
         <div class="bc-inner codes">
 
           <?php the_content() ?>
@@ -184,7 +184,6 @@
                 </div>
             </section>
         <?php  } ?>
+        <?php get_footer(); ?>
         </div>
 </main>
-
-<?php get_footer(); ?>

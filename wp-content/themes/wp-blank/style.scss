@@ -167,7 +167,7 @@ button:focus {
 }
 
 .u-normal-size {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1190,7 +1190,7 @@ footer {
     }
     .c-block_text_wrap {
       ul {
-      padding:0;
+      padding:0 2rem 0 0;
     }
    }
    .c-next-section {
@@ -1412,7 +1412,7 @@ footer {
   .post-password-form {
     min-height: 90vh;
     text-align: center;
-    padding-top: 40vh;
+    padding-top: 30vh;
     p {
       &:first-of-type {
         font-size: 20px;
@@ -1444,7 +1444,7 @@ footer {
   .codes-building_name {
     a {
       color:black;
-      padding:0.5rem;
+      margin:1.5rem;
     }
   }
 }
@@ -1692,6 +1692,18 @@ footer {
     top: 5%;
     right: 5%;
   }
+  .bc-inner.organization section {
+    margin: 0 4rem;
+    &#section-001 {
+      margin:0;
+    }
+    .c-block_text_title {
+      font-size:2rem;
+    }
+    .img-contain.animated {
+      opacity: 1!important;
+    }
+  }
 }
 
 .fa-15x {
@@ -1703,6 +1715,6 @@ footer {
       padding: 0px 3.25rem;
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
-    font-size:145px;
+    font-size:125px;
   }
 }

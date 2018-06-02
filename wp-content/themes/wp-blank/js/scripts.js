@@ -95,7 +95,7 @@ jQuery(document).ready(function ($) {
 				var rawDataFile = $(this).attr('data-target');
 
 				var pos = rawDataFile.lastIndexOf(".");
-				dataFile = rawDataFile.substr(0, pos < 0 ? rawDataFile.length : pos) + ".pdf";
+				var dataFile = rawDataFile.substr(0, pos < 0 ? rawDataFile.length : pos) + ".pdf";
 
 				console.log(dataFile);
 				// // hope the server sets Content-Disposition: attachment!
