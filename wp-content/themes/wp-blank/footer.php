@@ -3,7 +3,7 @@
 		        <div class="c-footer_contain">
 		            <div class="c-footer_inner row middle-xs center-xs">
 		                <div class="col col-xs-12 col-sm-3 logo u-demi-text"> <span class="box -text-left">
-		                        AMAIMMO<br>12 Laurier, Montreal<br>1.514.296.3005<br>M - F : 9am - 5pm <br> S - S : 12am - 3pm
+		                        AMAIMMO<br>12 Laurier, Montreal<br>1.514.296.3005<br><?php echo pll__('footer_m-f'); ?> : 9am - 5pm <br> <?php echo pll__('footer_s-s'); ?> : 12am - 3pm
 		                    </span> </div>
 		                <div class="col col-xs-12 col-sm-3 u-demi-text">
 		                	<span class="-text-left box"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>">Mission</a></span>

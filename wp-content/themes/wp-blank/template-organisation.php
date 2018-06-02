@@ -8,8 +8,8 @@
                 <div class="c-home_block c-half_block organization-title col-xs-12 col-sm-6  c-content_wrap o-container">
                     <div class="c-block_text_wrap">
                         <div class="c-block_text_content -align-center">
-                            <p class="c-block_text_title" id="c-block_text_title">Les Services Nous Vous Offrons </p>
-                            <p class="u-normal-text">relation avec les copropriétaires, information sur la comptabilité, l’entretien, les travaux, réponse aux questions courantes, </p>
+                            <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_intro-title'); ?></p>
+                            <p class="u-normal-text"><?php echo pll__('organisation_intro-desc'); ?></p>
                         </div>
                         <a href=" " class="c-block_link "></a>
                     </div>
@@ -27,14 +27,14 @@
                     </div>
                 </div>
                 <div class="c-home_block c-half_block col-xs-12 col-sm-6  c-content_wrap o-container -medium c-organization_text" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                    <p class="c-block_text_title" id="c-block_text_title">Service a la clientèle</p>
-                    <p>relation avec les administrateurs, traitement des dossiers importants, présentation des soumissions aux administrateurs, gestion des contrats, organisation des conseils d’administration et des assemblées générales, établissement des budgets</p>
+                    <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_list-1-title'); ?></p>
+                    <p><?php echo pll__('organisation_list-1-desc'); ?></p>
                 </div>
             </section>
             <section id="section-0002" class="row middle-xs">
                 <div class="c-home_block c-half_block  col-xs-12 col-sm-6  c-content_wrap o-container -medium c-organization_text" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                    <p class="c-block_text_title" id="c-block_text_title">Gestionnaire d’immeubles</p>
-                    <p>relation avec les copropriétaires, information sur la comptabilité, l’entretien, les travaux, réponse aux questions courantes,</p>
+                    <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_list-2-title'); ?></p>
+                    <p><?php echo pll__('organisation_list-2-desc'); ?></p>
                 </div>
                 <div class="c-home_block c-half_block col-xs-12 col-sm-6 c-organization_img">
                     <div class="row middle-xs center-xs">
@@ -53,14 +53,14 @@
                     </div>
                 </div>
                 <div class="c-home_block c-half_block  col-xs-12 col-sm-6  c-content_wrap o-container -medium c-organization_text" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                    <p class="c-block_text_title" id="c-block_text_title">Technicien en bâtiment</p>
-                    <p> visite des bâtiments, ordres de service pour petit entretien, surveillance des tâches et des travaux, demande de soumission pour les travaux importants,</p>
+                    <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_list-3-title'); ?></p>
+                    <p><?php echo pll__('organisation_list-3-desc'); ?></p>
                 </div>
             </section>
             <section id="section-003" class="row middle-xs">
                 <div class="c-home_block c-half_block  col-xs-12 col-sm-6  c-content_wrap o-container -medium c-organization_text" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                    <p class="c-block_text_title" id="c-block_text_title">Comptable</p>
-                    <p>répartition des frais de condo fonction des budgets, établissement et diffusion des états financiers aux administrateurs, </p>
+                    <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_list-4-title'); ?></p>
+                    <p><?php echo pll__('organisation_list-4-desc'); ?></p>
                 </div>
                 <div class="c-home_block c-half_block col-xs-12 col-sm-6 c-organization_img">
                     <div class="row middle-xs center-xs">
@@ -79,14 +79,14 @@
                     </div>
                 </div>
                 <div class="c-home_block c-half_block  col-xs-12 col-sm-6  c-content_wrap o-container -medium c-organization_text" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                    <p class="c-block_text_title" id="c-block_text_title">Aide-comptable</p>
-                    <p>encaissement des chèques de frais de condo, classement et conservation des chèques postdatés, saisie des écritures comptables, établissement des chèques pour le règlement des factures,</p>
+                    <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_list-5-title'); ?></p>
+                    <p><?php echo pll__('organisation_list-5-desc'); ?></p>
                 </div>
             </section>
             <section id="section-006" class="row middle-xs">
                 <div class="c-home_block c-half_block col-xs-12 col-sm-6 c-content_wrap o-container -medium c-organization_text" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                    <p class="c-block_text_title" id="c-block_text_title">6. Secrétaire de gestion</p>
-                    <p>Suivi des contrats annuels ou saisonniers, demande de soumission (conciergerie, déneigement, assurance,…),</p>
+                    <p class="c-block_text_title" id="c-block_text_title"><?php echo pll__('organisation_list-6-title'); ?></p>
+                    <p><?php echo pll__('organisation_list-6-desc'); ?></p>
                 </div>
                 <div class="c-home_block c-half_block col-xs-12 col-sm-6 c-organization_img">
                     <div class="row middle-xs center-xs">
