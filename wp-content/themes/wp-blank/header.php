@@ -141,7 +141,33 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		                    <h1><?php echo pll__('how_to_help'); ?></h1> </div>
 		            </div>
 		            <a href="#" class="close-button -right"></a>
-		            <form action="" class="">
+
+                <?php
+                $currentLang = pll_current_language();
+                if($currentLang == 'en') {
+                //actually written 'contact' in CMS
+                  $tag = 'contact-en';
+                } else {
+                  $tag = 'contact-fr';
+                }
+
+                $cat_query = null;
+
+                $args = array (
+                    'tag' => $tag
+                    );
+
+                $cat_query = new WP_Query( $args );
+
+                if ( $cat_query->have_posts() ) { ?>
+                    <div>
+                    <?php $cat_query->the_post();
+                    echo the_content(); ?>
+                  </div>
+                <?php  } ?>
+
+
+		            <!-- <form action="" class="">
 		                <div class="row">
 		                    <div class="fieldgroup col-xs-12 col-sm-6 start-xs">
 		                        <field>
@@ -184,7 +210,9 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		                        <button class="btn btn-submit"><?php echo pll__('submit'); ?></button>
 		                    </div>
 		                </div>
-		            </form>
+		            </form> -->
+
+
 		        </div>
 		    </div>
 		    <!--Close contact form -->

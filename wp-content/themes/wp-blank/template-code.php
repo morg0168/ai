@@ -4,8 +4,6 @@
     <div class="barba-container" data-next="index.html"  id="skrollr-body">
         <div class="bc-inner codes">
 
-          <?php the_content() ?>
-
           <?php
           //password protect everything else inside
           if ( !post_password_required() ) { ?>

@@ -1610,8 +1610,15 @@ footer {
     border: none;
     border-bottom: 1px solid grey;
     background: transparent;
-    padding: 1rem 0;
+    padding: 0;
     width: 100%;
+  }
+  .btn-submit {
+    input {
+      width: auto;
+      border-bottom: none;
+      cursor:pointer;
+    }
   }
   a {
     font-size: 20px;
@@ -1660,6 +1667,17 @@ footer {
         transform: rotate(-120deg);
       }
     }
+  }
+  .wpcf7-not-valid-tip {
+    color: red;
+  }
+  .screen-reader-response {
+    ul {
+      display: none;
+    }
+  }
+  .wpcf7-display-none {
+    display:none!important;
   }
 }
 
