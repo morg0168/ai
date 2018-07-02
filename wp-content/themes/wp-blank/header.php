@@ -81,9 +81,9 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		                <nav class="c-nav" id="js-nav">
 		                    <div class="c-nav_wrap row middle-xs center-xs">
 		                        <ul class="c-nav_main_list">
-		                            <li class="c-nav_main_item -first"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
-		                            <li class="c-nav_main_item -second"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
-		                            <li class="c-nav_main_item -third"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
+		                            <li class="c-nav_main_item -first"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
+		                            <li class="c-nav_main_item -second"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
+		                            <li class="c-nav_main_item -third"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
                                 <li class="c-nav_main_item mobile-links"><a href="javascript:void(0)" class="c-nav_main_link ajaxlink contact"><span class="c-nav_main_text">Contact</span></a></li>
                               	<span class="language-wrap"><?php
           													$args = array('hide_current' => true,
