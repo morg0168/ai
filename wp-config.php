@@ -37,6 +37,14 @@ define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+define('FS_METHOD', 'direct');
+
+/** SMTP credentials. */
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'Pboa0qyX6P+k' );
+
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -65,6 +73,11 @@ define('NONCE_SALT',       'NIoOh<uYf]VUV&wW`.(0{t;nWv%9p>+b6|pBTipLyoKfb>GB#em&
  */
 $table_prefix  = 'wp_';
 
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', true);
+@ini_set('display_errors', 1);
+
 /**
  * For developers: WordPress debugging mode.
  *
@@ -85,6 +98,6 @@ $table_prefix  = 'wp_';
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
-
+define( 'UPLOADS', 'wp-content/uploads' );
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
