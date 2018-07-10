@@ -33,7 +33,7 @@
             <section id="section-002" class="row middle-xs center-xs">
                 <div class="c-home_block c-half_block mission-text col-xs-12 col-sm-12  c-content_wrap o-container -medium ">
                     <ul class="row engagements-list" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
-                        <li class="col-xs-12 col-sm-4">
+                        <li class="col-xs-12 col-sm-4 no-padding">
                             <ul>
                                 <li class="row middle-xs"><span class="col-xs-3">1. </span><span class="col-xs-9"><?php echo pll__('mission_list-1'); ?></span></li>
                                 <li class="row middle-xs"><span class="col-xs-3">2. </span><span class="col-xs-9"><?php echo pll__('mission_list-2'); ?></span></li>
@@ -41,7 +41,7 @@
                                 <li class="row middle-xs"><span class="col-xs-3">4. </span><span class="col-xs-9"><?php echo pll__('mission_list-4'); ?></span></li>
                             </ul>
                         </li>
-                        <li class="col-xs-12 col-sm-4">
+                        <li class="col-xs-12 col-sm-4 no-padding">
                             <ul>
                                 <li class="row middle-xs"><span class="col-xs-3">5. </span><span class="col-xs-9"><?php echo pll__('mission_list-5'); ?></span></li>
                                 <li class="row middle-xs"><span class="col-xs-3">6. </span><span class="col-xs-9"><?php echo pll__('mission_list-6'); ?></span></li>
@@ -49,7 +49,7 @@
                                 <li class="row middle-xs"><span class="col-xs-3">8. </span><span class="col-xs-9"><?php echo pll__('mission_list-8'); ?></span></li>
                             </ul>
                         </li>
-                        <li class="col-xs-12 col-sm-4">
+                        <li class="col-xs-12 col-sm-4 no-padding">
                             <ul>
                                 <li class="row middle-xs"><span class="col-xs-3">9. </span><span class="col-xs-9"><?php echo pll__('mission_list-9'); ?></span></li>
                                 <li class="row middle-xs"><span class="col-xs-3">10. </span><span class="col-xs-9"><?php echo pll__('mission_list-10'); ?></span></li>

@@ -27,6 +27,14 @@
   font-style: normal;
 }
 
+.no-padding {
+  @media only screen and (max-width: 767px){
+    // padding:0;
+    // margin-bottom: 0;
+    // margin-top: 0;
+  }
+}
+
 
 /* Mixin */
 
@@ -1247,8 +1255,13 @@ footer {
     }
     .c-main_wrap {
       // background-image: url('./img/mtl.jpg');
+      @media only screen and (max-width: 767px) {
+        padding-bottom: 0;
+        padding-top: 0;
+      }
       padding-bottom: 20vh;
       padding-top: 10vh;
+      padding: 1rem 4rem;
     }
     .c-main_inner_home.pdf-wrap {
       height: 100vh;
@@ -1355,10 +1368,22 @@ footer {
           padding-left: 0;
           font-size: 1.2rem;
           > li {
+            &:first-of-type {
+              li:first-of-type {
+                @media only screen and (max-width: 767px) {
+                  margin-top:3rem;
+                }
+                margin-top:1rem;
+              }
+            }
             margin: 1rem 0;
-              @media only screen and (max-width: 767px) {
-            padding:0;
-          }
+            @media only screen and (max-width: 767px) {
+              padding:0;
+              margin:0;
+            }
+           li {
+              margin-bottom:1rem;
+            }
           }
         }
       }
@@ -1590,6 +1615,19 @@ footer {
 
 /** contact modal**/
 
+div[role=form] {
+  position:relative;
+  .screen-reader-response{
+        position:absolute;
+        bottom:1rem;
+        color:red;
+        @media only screen and (max-width: 767px) {
+            max-width: 50%;
+            bottom:0;
+        }
+  }
+}
+
 .modal-wrap {
   background-color: white;
   text-align: center;
@@ -1624,7 +1662,11 @@ footer {
     margin: 0 auto;
   }
   .fieldgroup {
+    @media only screen and (min-width: 768px) {
+      margin:0;
+    }
     margin: 1rem 0;
+
   }
   label {
     display: block;

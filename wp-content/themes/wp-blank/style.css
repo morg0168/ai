@@ -1245,6 +1245,14 @@ footer .c-footer_contain span a {
 .bc-inner.codes .c-main_wrap {
   padding-bottom: 20vh;
   padding-top: 10vh;
+  padding: 1rem 4rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-inner.codes .c-main_wrap {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 .bc-inner.codes .c-main_inner_home.pdf-wrap {
@@ -1372,10 +1380,25 @@ footer .c-footer_contain span a {
   margin: 1rem 0;
 }
 
+.bc-inner.mission #section-002 .c-home_block ul > li:first-of-type li:first-of-type {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-inner.mission #section-002 .c-home_block ul > li:first-of-type li:first-of-type {
+    margin-top: 3rem;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .bc-inner.mission #section-002 .c-home_block ul > li {
     padding: 0;
+    margin: 0;
   }
+}
+
+.bc-inner.mission #section-002 .c-home_block ul > li li {
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1612,6 +1635,23 @@ footer .c-footer_contain span a {
 }
 
 /** contact modal**/
+div[role=form] {
+  position: relative;
+}
+
+div[role=form] .screen-reader-response {
+  position: absolute;
+  bottom: 1rem;
+  color: red;
+}
+
+@media only screen and (max-width: 767px) {
+  div[role=form] .screen-reader-response {
+    max-width: 50%;
+    bottom: 0;
+  }
+}
+
 .modal-wrap {
   background-color: white;
   text-align: center;
@@ -1651,6 +1691,12 @@ footer .c-footer_contain span a {
 
 .mb-contain .fieldgroup {
   margin: 1rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .mb-contain .fieldgroup {
+    margin: 0;
+  }
 }
 
 .mb-contain label {

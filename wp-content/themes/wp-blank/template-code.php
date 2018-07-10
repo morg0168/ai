@@ -11,7 +11,7 @@
             <!-- section 1 -->
             <section class="section-001 hero o-container" id="section-001">
                 <div class="c-main_wrap diff row">
-                    <div class="c-main_inner_home col-xs-12 col-sm-6">
+                    <div class="c-main_inner_home col-xs-12 col-sm-12">
                         <header class="c-home_header" data-center="@myAttr:-in-view box">
                             <div class="js-parallax">
                                 <div class="-overflow-hidden">
