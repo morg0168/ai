@@ -75,12 +75,13 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		        <div class="c-header_wrap o-container">
 		            <div class="c-header_inner">
 		                <!--mobile nav will go here-->
-		                <div class="c-header_main_logo"><a class="c-header_main_logo_link ajaxlink" href="<?php echo home_url(); ?>"><span><img src="<?php echo get_template_directory_uri(); ?>/img/logo_text.png" alt=""></span></a>
+		                <div class="c-header_main_logo"><a class="c-header_main_logo_link ajaxlink" href="<?php echo home_url(); ?>"><span><img class="black-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_text.png" alt=""></span></a>
 		                </div>
 		                <button id="js-toggle_menu"><span></span></button>
 		                <nav class="c-nav" id="js-nav">
 		                    <div class="c-nav_wrap row middle-xs center-xs">
 		                        <ul class="c-nav_main_list">
+                               <li class="c-nav_main_item"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] ?>" class="ajaxlink c-nav_main_link desktop-up"><span class="c-nav_main_text">Home</span></a></li>
 		                            <li class="c-nav_main_item -first"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
 		                            <li class="c-nav_main_item -second"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
 		                            <li class="c-nav_main_item -third"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
