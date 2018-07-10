@@ -162,7 +162,7 @@ jQuery(document).ready(function ($) {
 						header.removeClass('c-header_static').addClass('c-header_scrolled');
 				}
 				else {
-						header.removeClass('c-header_scrolled').addClass('c-header_static');
+						//header.removeClass('c-header_scrolled').addClass('c-header_static');
 				}
 			}
 		});

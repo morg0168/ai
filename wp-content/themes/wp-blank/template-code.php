@@ -6,8 +6,7 @@
 
           <?php
           //password protect everything else inside
-          if ( !post_password_required() ) { ?>
-
+          if ( post_password_required() ) { ?>
             <!-- section 1 -->
             <section class="section-001 hero o-container" id="section-001">
                 <div class="c-main_wrap diff row">

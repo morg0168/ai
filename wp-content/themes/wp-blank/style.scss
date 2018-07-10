@@ -965,6 +965,7 @@ main {
         color: #fff;
         text-transform: uppercase;
         display: inline;
+        right:0;
         .js-parallax {
           .-overflow-hidden {
             // padding: 130px 0;
@@ -998,7 +999,7 @@ main {
         z-index: 99;
         color: #fff;
       }
-      &[myAttr="-in-view"] .js-parallax, .mobile .js-parallax {
+      &[myAttr="-in-view"] .js-parallax, .mobile.js-parallax {
         .-overflow-hidden {
           -webkit-transition: all 0.5s ease-out;
           -moz-transition: all 0.5s ease-out;
@@ -1196,7 +1197,9 @@ footer {
       -webkit-transform: scale(1, 0);
       -moz-transform: scale(1, 0);
     }
-    min-height: calc(80vh);
+    @media only screen and (min-width: 768px) {
+      min-height: calc(90vh);
+    }
     // width: 100%;
     opacity: 1;
     transition: all 1s ease-in-out;
@@ -1208,6 +1211,8 @@ footer {
   @media only screen and (max-width: 767px) {
     h1 {
       font-size:2rem;
+      position:relative;
+      right:5rem;
     }
     .c-block_read_more {
       padding: 1rem 1rem;
@@ -1782,6 +1787,7 @@ div[role=form] {
     }
     .c-block_text_title {
       font-size:2rem;
+
     }
     .img-contain.animated {
       opacity: 1!important;

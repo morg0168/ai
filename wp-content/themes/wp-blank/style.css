@@ -959,6 +959,7 @@ main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
   color: #fff;
   text-transform: uppercase;
   display: inline;
+  right: 0;
 }
 
 main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title .js-parallax .-overflow-hidden {
@@ -995,7 +996,7 @@ main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_subtitle {
   color: #fff;
 }
 
-main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax .-overflow-hidden, main .c-main_wrap .c-main_inner_home .c-home_header .mobile .js-parallax .-overflow-hidden {
+main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax .-overflow-hidden, main .c-main_wrap .c-main_inner_home .c-home_header .mobile.js-parallax .-overflow-hidden {
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
@@ -1003,7 +1004,7 @@ main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-paral
   transition: all 0.5s ease-out;
 }
 
-main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax span, main .c-main_wrap .c-main_inner_home .c-home_header .mobile .js-parallax span {
+main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax span, main .c-main_wrap .c-main_inner_home .c-home_header .mobile.js-parallax span {
   -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.84, -0.01, 0.48, 0.995);
   transition: -webkit-transform 1.5s cubic-bezier(0.84, -0.01, 0.48, 0.995);
   transition: transform 1.5s cubic-bezier(0.84, -0.01, 0.48, 0.995);
@@ -1011,7 +1012,7 @@ main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-paral
   display: inline-block;
 }
 
-main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax span:nth-child(2n-1), main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax span:nth-child(2n), main .c-main_wrap .c-main_inner_home .c-home_header .mobile .js-parallax span:nth-child(2n-1), main .c-main_wrap .c-main_inner_home .c-home_header .mobile .js-parallax span:nth-child(2n) {
+main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax span:nth-child(2n-1), main .c-main_wrap .c-main_inner_home .c-home_header[myAttr="-in-view"] .js-parallax span:nth-child(2n), main .c-main_wrap .c-main_inner_home .c-home_header .mobile.js-parallax span:nth-child(2n-1), main .c-main_wrap .c-main_inner_home .c-home_header .mobile.js-parallax span:nth-child(2n) {
   -webkit-transform: translate(0, 0%);
   -ms-transform: translate(0, 0%);
   transform: translate(0, 0%);
@@ -1172,7 +1173,6 @@ footer .c-footer_contain span a {
 
 /*** new styles***/
 .home .c-main_wrap:not(.diff) {
-  min-height: calc(80vh);
   opacity: 1;
   transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -1199,9 +1199,17 @@ footer .c-footer_contain span a {
   -moz-transform: scale(1, 0);
 }
 
+@media only screen and (min-width: 768px) {
+  .home .c-main_wrap:not(.diff) {
+    min-height: calc(90vh);
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .home h1 {
     font-size: 2rem;
+    position: relative;
+    right: 5rem;
   }
   .home .c-block_read_more {
     padding: 1rem 1rem;
