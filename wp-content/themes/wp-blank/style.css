@@ -1321,6 +1321,16 @@ footer .c-footer_contain span a {
   padding-left: 4rem;
 }
 
+.bc-inner.codes .c-home_header {
+  margin-top: 3.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-inner.codes .c-home_header {
+    margin-top: 70px;
+  }
+}
+
 .bc-inner.mission #section-001 .c-home_block.c-half_block:not(.mission-text) {
   background-image: url("./img/test.jpg");
   height: 100vh;
@@ -1495,7 +1505,13 @@ footer .c-footer_contain span a {
 .bc-inner .post-password-form {
   min-height: 90vh;
   text-align: center;
-  padding-top: 30vh;
+  padding-top: calc(30vh - 3.75rem);
+}
+
+@media only screen and (max-width: 767px) {
+  .bc-inner .post-password-form {
+    padding-top: calc(30vh - 70px);
+  }
 }
 
 .bc-inner .post-password-form p:first-of-type {

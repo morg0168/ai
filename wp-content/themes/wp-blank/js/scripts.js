@@ -166,5 +166,10 @@ jQuery(document).ready(function ($) {
 				}
 			}
 		});
-
+		(function(){
+			$('.bc-inner.codes #section-002').closest('body').find('#section-001').remove();
+			if ($(window).width() > 768) {
+				skrollr.get().refresh();
+			}
+		})();
 	});

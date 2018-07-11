@@ -847,7 +847,6 @@ html {
     transition: all 1s ease-out;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .c-header.c-header_static .c-nav {
     -webkit-transition: all 0.5s ease-out;
@@ -1242,14 +1241,11 @@ footer {
     position: relative;
   }
 }
-
 .c-footer_inner {
   margin-right:0;
   margin-left:0;
 }
-
 /*** codes***/
-
 .bc-inner {
   &.codes {
     h1 {
@@ -1318,6 +1314,12 @@ footer {
       list-style: disc;
       ul .level3 {
         padding-left: 4rem;
+      }
+    }
+    .c-home_header {
+      margin-top:3.75rem;
+      @media only screen and (max-width: 767px) {
+        margin-top: 70px;
       }
     }
   }
@@ -1465,7 +1467,10 @@ footer {
   .post-password-form {
     min-height: 90vh;
     text-align: center;
-    padding-top: 30vh;
+    padding-top: calc(30vh - 3.75rem);
+    @media only screen and (max-width: 767px) {
+        padding-top: calc(30vh - 70px);
+    }
     p {
       &:first-of-type {
         font-size: 20px;

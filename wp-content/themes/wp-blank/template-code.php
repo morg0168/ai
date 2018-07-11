@@ -6,7 +6,7 @@
 
           <?php
           //password protect everything else inside
-          if ( post_password_required() ) { ?>
+          //if ( !post_password_required() ) { ?>
             <!-- section 1 -->
             <section class="section-001 hero o-container" id="section-001">
                 <div class="c-main_wrap diff row">
@@ -15,8 +15,30 @@
                             <div class="js-parallax">
                                 <div class="-overflow-hidden">
                                   <!--start Loop -->
+                                <?php if ( !post_password_required() ) { ?>
                                   <?php if (have_posts()): while (have_posts()): the_post();?>
-                                    <h1 class="-text-left"><?php the_content(); ?></h1>
+                                    <h1 class="-text-left">
+                                      <?php the_content(); ?>
+                                    </h1>
+                                  </div>
+                                </div>
+                              </header>
+                            </div>
+                          </div>
+                        </section>
+                                  <?php endwhile; endif; } ?>
+
+                                    <?php if ( !post_password_required() ) { ?>
+                                      <?php if (have_posts()): while (have_posts()): the_post();?>
+                                        <section class="section-001 hero o-container" id="section-002">
+                                            <div class="c-main_wrap diff row">
+                                                <div class="c-main_inner_home col-xs-12 col-sm-12">
+                                                    <header class="c-home_header" data-center="@myAttr:-in-view box">
+                                                        <div class="js-parallax">
+                                                            <div class="-overflow-hidden">
+                                                              <h1 class="-text-left">
+                                                                <?php the_content(); ?>
+                                                              </h1>
                                     <ul class="codes-list -nested level1">
                                       <?php
                                         $portal_block = get_post_meta( get_the_ID(), 'portal_block', true );
