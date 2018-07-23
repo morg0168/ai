@@ -3,7 +3,7 @@
 		        <div class="c-footer_contain">
 		            <div class="c-footer_inner row middle-xs center-xs">
 		                <div class="col col-xs-12 col-sm-3 logo u-demi-text"> <span class="box -text-left">
-		                        AMAIMMO<br>12 Laurier, Montreal<br>1.514.296.3005<br><?php echo pll__('footer_m-f'); ?> : 9am - 5pm <br> <?php echo pll__('footer_s-s'); ?> : 12am - 3pm
+		                        AMAIMMO<br>221, Fairmount C.P. 55021<br>Montréal (Qc) H2T 3E2<br>514-937-9555
 		                    </span> </div>
 		                <div class="col col-xs-12 col-sm-3 u-demi-text">
 		                	<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>">Mission</a></span>
@@ -25,8 +25,8 @@
 		            <script>
 		                function initMap() {
 		                    var montreal = {
-		                        lat: 45.486980
-		                        , lng: -73.636262
+		                        lat: 45.521268
+		                        , lng: -73.597104
 		                    };
 		                    var map = new google.maps.Map(document.getElementById('map'), {
 		                        zoom: 12

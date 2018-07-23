@@ -130,7 +130,7 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		    </nav>
 
 		    <nav class="c-header_tertiary -desktop">
-		        <p>1.514.296.3005</p>
+		        <p>514-937-9555</p>
 		    </nav>
 
 		    <!--Contact form -->
