@@ -1362,6 +1362,7 @@ footer .c-footer_contain span a {
 
 .bc-inner.mission #section-0002 .c-block_text_title {
   color: white;
+  margin-bottom: 0;
 }
 
 .bc-inner.mission #section-0002 .c-block_text_title:after {
@@ -1733,6 +1734,7 @@ div[role=form] .screen-reader-response {
   background: transparent;
   padding: 0;
   width: 100%;
+  max-height: 15vh;
 }
 
 .mb-contain .btn-submit input {
@@ -1857,7 +1859,7 @@ div[role=form] .screen-reader-response {
 
 @media only screen and (min-width: 1025px) {
   .c-header .c-header_wrap .c-header_inner .c-nav .c-nav_wrap ul.c-nav_main_list li a {
-    padding: 0px 3.25rem;
+    padding: 0px 1.75rem;
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
     font-size: 125px;

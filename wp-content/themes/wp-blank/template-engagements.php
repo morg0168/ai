@@ -5,12 +5,12 @@
         <div class="bc-inner mission">
             <section id="section-0002" class="row middle-xs center-xs">
                 <div class="c-home_block c-half_block mission-text col-xs-12 col-sm-12  c-content_wrap ">
-                    <p class="c-block_text_title" id="c-block_text_title" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)"><?php echo pll__('mission_dix-engagements'); ?></p>
+                    <p class="c-block_text_title" id="c-block_text_title" data-start="opacity:1;" data-100-start="opacity: 0.5;"><?php echo pll__('mission_dix-engagements'); ?></p>
                 </div>
             </section>
             <section id="section-002" class="row middle-xs center-xs">
                 <div class="c-home_block c-half_block mission-text col-xs-12 col-sm-12  c-content_wrap o-container -medium ">
-                    <ul class="row engagements-list" data-start="opacity:0; transform: translate(0px, 50vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
+                    <ul class="row engagements-list" data-start="opacity:0; transform: translate(0px, 20vh) rotate(0deg)" data-center="opacity: 1; transform: translate(0px, 0px) rotate(0deg)">
                         <li class="col-xs-12 col-sm-4 no-padding">
                             <ul>
                                 <li class="row middle-xs"><span class="col-xs-3">1. </span><span class="col-xs-9"><?php echo pll__('mission_list-1'); ?></span></li>

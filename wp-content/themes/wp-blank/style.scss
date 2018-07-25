@@ -1351,6 +1351,8 @@ footer {
       background-position: left bottom;
       .c-block_text_title {
         color: white;
+        margin-bottom:0;
+
         &:after {
           background-color: white;
           width: 240px;
@@ -1687,6 +1689,7 @@ div[role=form] {
     background: transparent;
     padding: 0;
     width: 100%;
+    max-height: 15vh;
   }
   .btn-submit {
     input {
@@ -1806,7 +1809,7 @@ div[role=form] {
 
 @media only screen and (min-width: 1025px) {
   .c-header .c-header_wrap .c-header_inner .c-nav .c-nav_wrap ul.c-nav_main_list li a {
-      padding: 0px 3.25rem;
+      padding: 0px 1.75rem;
   }
   main .c-main_wrap .c-main_inner_home .c-home_header .c-home_header_title {
     font-size:125px;

@@ -60,11 +60,6 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 	<body>
 
 
-	<!-- 	<nav class="nav" role="navigation">
-			<?php //wpblank_nav(); ?>
-		</nav> -->
-
-
 		<!-- wrapper -->
 		<div class="wrapper">
 
@@ -170,53 +165,6 @@ if ($GLOBALS['currentlang'] == "en-CA") {
                     echo the_content(); ?>
                   </div>
                 <?php  } ?>
-
-
-		            <!-- <form action="" class="">
-		                <div class="row">
-		                    <div class="fieldgroup col-xs-12 col-sm-6 start-xs">
-		                        <field>
-		                            <label for=""><?php echo pll__('name'); ?></label>
-		                            <input type="text"> </field>
-		                    </div>
-		                    <div class="fieldgroup col-xs-12 col-sm-6 start-xs">
-		                        <field>
-		                            <label for=""><?php echo pll__('email'); ?></label>
-		                            <input type="text"> </field>
-		                    </div>
-		                </div>
-		                <div class="row">
-		                    <div class="fieldgroup col-xs-12 col-sm-4 start-xs">
-		                        <field>
-		                            <label for=""><?php echo pll__('subject'); ?></label>
-		                            <input type="text"> </field>
-		                    </div>
-		                    <div class="fieldgroup col-xs-12 col-sm-4 start-xs">
-		                        <field>
-		                            <label for=""><?php echo pll__('building_address'); ?></label>
-		                            <input type="text"> </field>
-		                    </div>
-		                    <div class="fieldgroup col-xs-12 col-sm-4 start-xs">
-		                        <field>
-		                            <label for=""><?php echo pll__('unit_number'); ?></label>
-		                            <input type="text"> </field>
-		                    </div>
-		                </div>
-		                <div class="row">
-		                    <div class="fieldgroup col-xs-12 col-sm-12 start-xs">
-		                        <field>
-		                            <label for=""><?php echo pll__('message'); ?></label>
-		                            <textarea></textarea>
-		                        </field>
-		                    </div>
-		                </div>
-		                <div class="row">
-		                    <div class="fieldgroup col-xs-12 col-sm-12 end-xs">
-		                        <button class="btn btn-submit"><?php echo pll__('submit'); ?></button>
-		                    </div>
-		                </div>
-		            </form> -->
-
 
 		        </div>
 		    </div>
