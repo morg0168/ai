@@ -96,7 +96,7 @@ if ($GLOBALS['currentlang'] == "en-CA") {
 		                        <ul class="c-nav_main_list">
 															<li class="c-nav_main_item -first"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>" class="ajaxlink c-nav_main_link"><span class="c-nav_main_text">Mission</span></a></li>
 															<li class="c-nav_main_item -second"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Organisation</span></a></li>
-															<li class="c-nav_main_item -third"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Codes</span></a></li>
+															<li class="c-nav_main_item -third"><a href="<?php echo $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>" class="c-nav_main_link ajaxlink"><span class="c-nav_main_text">Documents</span></a></li>
 		                        </ul>
 		                        <div class="c-main_right row middle-xs"> <a href="" class="c-main_right_laguage c-nav_main_link -small "><span class="c-main_right_language_text">
 
