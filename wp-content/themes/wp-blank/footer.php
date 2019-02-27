@@ -7,8 +7,8 @@
 		                    </span> </div>
 		                <div class="col col-xs-12 col-sm-3 u-demi-text">
 		                	<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>">Mission</a></span>
-											<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>">Organization</a></span>
-											<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>">Codes</a></span>
+											<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['organizationPage']; ?>"><?php echo $GLOBALS['currentlang'] !== "en-CA" ? 'Organisation' :  'Organization' ?></a></span>
+											<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['codesPage']; ?>">Archives</a></span>
 		                </div>
 		                <div class="col col-xs-12 col-sm-3 logo u-demi-text">
 											<span class="-text-left box">
