@@ -1547,6 +1547,7 @@ footer .c-footer_contain span a {
 .bc-inner .codes-building_name a {
   color: black;
   margin: 1.5rem;
+  padding: 1.5em;
 }
 
 @media only screen and (min-width: 768px) {
