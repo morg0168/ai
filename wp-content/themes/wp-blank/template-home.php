@@ -81,7 +81,7 @@
                                 <div class="c-block_text_wrap box">
                                     <div class="c-block_text_content -align-center">
                                         <p class="c-block_text_title_pre"><?php echo pll__('notre'); ?></p>
-                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> Organization </h1>
+                                        <h1 class="c-block_text_title" id="c-block_text_title" data-start="transform: translate(0px, 0px) rotate(0deg)" data-center="transform: translate(-100px, 0px) rotate(0deg)"> <?php echo $GLOBALS['currentlang'] !== "en-CA" ? 'Organisation' :  'Organization' ?> </h1>
                                         <ul class="-text-left u-normal-text u-normal-size">
                                           <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size"><?php echo pll__('home_organization-service'); ?></li>
                                           <li data-start="@class: -text-left u-normal-text -fadein-text_before u-normal-size" data-bottom="@class: -text-left u-normal-text -fadein-text_after u-normal-size"><?php echo pll__('home_organization-gestion'); ?></li>
