@@ -2,14 +2,17 @@
 # This file is distributed under the same license as the WordPress - 4.9.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-04-15 03:45:18+0000\n"
+"PO-Revision-Date: 2019-04-07 14:52-0400\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: Poedit 2.2.1\n"
 "Language: fr_CA\n"
 "Project-Id-Version: WordPress - 4.9.x - Development\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #. translators: Translate this to the correct language tag for your locale, see
 #. https://www.w3.org/International/articles/language-tags/ for reference. Do
@@ -7422,7 +7425,7 @@ msgstr "le,la,les,de,des,un,uns,une,unes,et,a,à,il,elle,on,ne,je,tu,nous,vous,i
 
 #: wp-includes/post-template.php:1610
 msgid "This content is password protected. To view it please enter your password below:"
-msgstr "Cet article est protégé par un mot de passe. Pour le lire, veuillez saisir votre mot de passe ci-dessous :"
+msgstr "Ce contenu est protégé par un mot de passe. Pour le lire, veuillez saisir votre mot de passe ci-dessous :"
 
 #: wp-includes/functions.php:1230
 msgid "ERROR: This is not a valid feed template."
@@ -9045,7 +9048,7 @@ msgstr "Votre serveur utilise la version %1$s de PHP mais WordPress %2$s nécess
 
 #: wp-includes/theme-compat/comments.php:24
 msgid "This post is password protected. Enter the password to view comments."
-msgstr "Cet article est protégé par un mot de passe. Saisissez le mot de passe pour voir les commentaires."
+msgstr "Ce contenu est protégé par un mot de passe. Saisissez le mot de passe pour voir les commentaires."
 
 #. translators: %s: category name
 #: wp-includes/theme-compat/sidebar.php:39
