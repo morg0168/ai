@@ -3,7 +3,7 @@
 		        <div class="c-footer_contain">
 		            <div class="c-footer_inner row middle-xs center-xs">
 		                <div class="col col-xs-12 col-sm-3 logo u-demi-text"> <span class="box -text-left">
-		                        AMAIMMO<br>221, Fairmount C.P. 55021<br>Montréal (Qc) H2T 3E2<br>514-937-9555
+		                        AMA IMMO<br>221, Fairmount C.P. 55021<br>Montréal (Qc) H2T 3E2<br>514-937-9555
 		                    </span> </div>
 		                <div class="col col-xs-12 col-sm-3 u-demi-text">
 		                	<span class="-text-left box"><a href="<?php echo $GLOBALS['base'] . $GLOBALS['langPrefix'] . $GLOBALS['missionPage']; ?>">Mission</a></span>
@@ -19,7 +19,7 @@
 													}
 												?></span>
 												<span class="-text-left box"><a href="javascript:void(0)" class="footer-contact">Contact</a></span>
-												<span class="-text-left box"><a href="mailto:amaimmo@hotmail.com">Amaimmo@hotmail.com</a></span>
+												<span class="-text-left box"><a href="mailto:amaimmo@hotmail.com">amaimmo@hotmail.com</a></span>
 		                </div>
 		            </div>
 		            <script>
