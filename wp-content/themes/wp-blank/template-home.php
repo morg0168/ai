@@ -18,6 +18,7 @@
                                             <span style="transition-delay: 0.2s;">A</span>
                                             <span style="transition-delay: 0.4s;">M</span>
                                             <span style="transition-delay: 0.4s;">A</span>
+                                            <span style="transition-delay: 0.6s; padding-left:24px;">  </span>
                                             <span style="transition-delay: 0.6s;">I</span>
                                             <span style="transition-delay:  0.8s;">M</span>
                                             <span style="transition-delay:  0.8s;">M</span>
